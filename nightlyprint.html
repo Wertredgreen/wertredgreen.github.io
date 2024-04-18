@@ -138,7 +138,7 @@
           </tr>
       </table>
       <br>
-      <input type="button" id="buttonhide" value="Print this page" onClick="hideprint()">
+      <input type="button" id="buttonhide" class="printbutton" value="Print this page" onClick="hideprint()">
 
     <script>
         function hideprint(){
@@ -336,6 +336,11 @@ table, th, td {
 table {
   width: 95%;
   border-collapse: collapse;
+}
+.printbutton {
+  width: 25%;
+  height: 5%;
+  margin: auto;
 }
 </style>
 </body>
