@@ -1,0 +1,330 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print Nightly Count</title>
+</head>
+<body>
+    <br><br><br><br>
+    <table>
+        <tr>
+            <th colspan="4" style="text-align: center;">Stargazer 5 Nightly Inventory: <span id="Date"></span></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th style="text-align: center;">Stockroom</th>
+          <th style="width:65%; text-align: center;">Count</th>
+          <th style="width:8%; text-align: center;">Total</th>
+        </tr>
+        <tr>
+          <th>Small Candy</th> <!-- Name of Item-->
+          <td><span id="smc6-v"></span></td> <!-- Amount In Stockroom-->
+          <td><span id="smc1-v"></span> + <span id="smc2-v"></span> + <span id="smc3-v"></span> + <span id="smc7-v"></span> + <span id="smc4-v"></span> + <span id="smc5-v"></span></span></td> <!-- All Other Numbers To Add-->
+          <td><span id="ttlsmc-v"></span></td> <!-- Total -->
+        </tr>
+        <tr>
+          <th>Medium Candy</th> <!-- Name of Item-->
+          <td><span id="mdc6-v"></span></td> <!-- Amount In Stockroom-->
+          <td><span id="mdc1-v"></span> + <span id="mdc2-v"></span> + <span id="mdc3-v"></span> + <span id="mdc4-v"></span> + <span id="mdc5-v"></span></td> <!-- All Other Numbers To Add-->
+          <td><span id="ttlmdc-v"></span></td> <!-- Total -->
+        </tr>
+        <tr>
+            <th>Large Candy</th> <!-- Name of Item-->
+            <td><span id="lgc6-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="lgc1-v"></span> + <span id="lgc2-v"></span> + <span id="lgc3-v"></span> + <span id="lgc4-v"></span> + <span id="lgc5-v"></span></td> <!-- All Other Numbers To Add-->
+            <td><span id="ttllgc-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Ice Cup</th> <!-- Name of Item-->
+            <td><span id="icecup2-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="icecup1-v"></span></td><!-- All Other Numbers To Add-->
+            <td><span id="ttlicecup-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Kid Cup</th> <!-- Name of Item-->
+            <td><span id="kdcup2-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="kdcup1-v"></span></td><!-- All Other Numbers To Add-->
+            <td><span id="ttlkdcup-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Small Cup</th> <!-- Name of Item-->
+            <td><span id="smcup2-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="smcup1-v"></span></td><!-- All Other Numbers To Add-->
+            <td><span id="ttlsmcup-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Medium Cup</th> <!-- Name of Item-->
+            <td><span id="mdcup2-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="mdcup1-v"></span></td><!-- All Other Numbers To Add-->
+            <td><span id="ttlmdcup-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Large Cup</th> <!-- Name of Item-->
+            <td><span id="lgcup2-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="lgcup1-v"></span></td><!-- All Other Numbers To Add-->
+            <td><span id="ttllgcup-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>ICEE Cup</th> <!-- Name of Item-->
+            <td><span id="iccup2-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="iccup1-v"></span></td><!-- All Other Numbers To Add-->
+            <td><span id="ttliccup-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Hotdog</th> <!-- Name of Item-->
+            <td><span id="htdg2-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="htdg1-v"></span></td><!-- All Other Numbers To Add-->
+            <td><span id="ttlhtdg-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Nacho</th> <!-- Name of Item-->
+            <td><span id="ncho3-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="ncho1-v"></span> + <span id="ncho2-v"></span></td> <!-- All Other Numbers To Add-->
+            <td><span id="ttlncho-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Pickle</th> <!-- Name of Item-->
+            <td><span id="pckl3-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="pckl1-v"></span> + <span id="pckl2-v"></span></td> <!-- All Other Numbers To Add-->
+            <td><span id="ttlpckl-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Small Bag</th> <!-- Name of Item-->
+            <td><span id="spb3-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="spb1-v"></span> + <span id="spb2-v"></span></td> <!-- All Other Numbers To Add-->
+            <td><span id="ttlspb-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Medium Bag</th> <!-- Name of Item-->
+            <td><span id="mpb3-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="mpb1-v"></span> + <span id="mpb2-v"></span></td> <!-- All Other Numbers To Add-->
+            <td><span id="ttlmpb-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Large Bag</th> <!-- Name of Item-->
+            <td><span id="lpb3-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="lpb1-v"></span> + <span id="lpb2-v"></span></td> <!-- All Other Numbers To Add-->
+            <td><span id="ttllpb-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Combo Bag</th> <!-- Name of Item-->
+            <td><span id="cpb3-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="cpb1-v"></span> + <span id="cpb2-v"></span></td> <!-- All Other Numbers To Add-->
+            <td><span id="ttlcpb-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>Kid Pack</th> <!-- Name of Item-->
+            <td><span id="kdp3-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="kdp1-v"></span> + <span id="kdp2-v"></span></td> <!-- All Other Numbers To Add-->
+            <td><span id="ttlkdp-v"></span></td> <!-- Total -->
+          </tr>
+          <tr>
+            <th>To-Go Bag</th> <!-- Name of Item-->
+            <td>0</td> <!-- Amount In Stockroom-->
+            <td><span id="tgp1-v"></span> + <span id="tgp2-v"></span></td> <!-- All Other Numbers To Add-->
+            <td><span id="ttltgp-v"></span></td> <!-- Total -->
+          </tr>
+      </table>
+      <br>
+      <input type="button" id="buttonhide" value="Print this page" onClick="hideprint()">
+
+    <script>
+        function hideprint(){
+     document.getElementById("buttonhide").style.height = "0px";
+     document.getElementById("buttonhide").style.padding = "0px"; 
+     document.getElementById("buttonhide").style.width = "0px"; // Make Print Button Disappear
+     window.print();
+        }
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = mm + '/' + dd + '/' + yyyy;
+        document.getElementById('Date').textContent = today;
+
+
+        const smc1 = new URLSearchParams(window.location.search).get('smc1');
+        document.getElementById('smc1-v').textContent = smc1;
+        const smc2 = new URLSearchParams(window.location.search).get('smc2');
+        document.getElementById('smc2-v').textContent = smc2;
+        const smc3 = new URLSearchParams(window.location.search).get('smc3');
+        document.getElementById('smc3-v').textContent = smc3;
+        const smc4 = new URLSearchParams(window.location.search).get('smc4');
+        document.getElementById('smc4-v').textContent = smc4;
+        const smc5 = new URLSearchParams(window.location.search).get('smc5');
+        document.getElementById('smc5-v').textContent = smc5;
+        const smc6 = new URLSearchParams(window.location.search).get('smc6');
+        document.getElementById('smc6-v').textContent = smc6;
+        const smc7 = new URLSearchParams(window.location.search).get('smc7');
+        document.getElementById('smc7-v').textContent = smc7;
+        const ttlsmc = new URLSearchParams(window.location.search).get('ttlsmc');
+        document.getElementById('ttlsmc-v').textContent = ttlsmc;
+        const mdc1 = new URLSearchParams(window.location.search).get('mdc1');
+        document.getElementById('mdc1-v').textContent = mdc1;
+        const mdc2 = new URLSearchParams(window.location.search).get('mdc2');
+        document.getElementById('mdc2-v').textContent = mdc2;
+        const mdc3 = new URLSearchParams(window.location.search).get('mdc3');
+        document.getElementById('mdc3-v').textContent = mdc3;
+        const mdc4 = new URLSearchParams(window.location.search).get('mdc4');
+        document.getElementById('mdc4-v').textContent = mdc4;
+        const mdc5 = new URLSearchParams(window.location.search).get('mdc5');
+        document.getElementById('mdc5-v').textContent = mdc5;
+        const mdc6 = new URLSearchParams(window.location.search).get('mdc6');
+        document.getElementById('mdc6-v').textContent = mdc6;
+        const ttlmdc = new URLSearchParams(window.location.search).get('ttlmdc');
+        document.getElementById('ttlmdc-v').textContent = ttlmdc;
+        const lgc1 = new URLSearchParams(window.location.search).get('lgc1');
+        document.getElementById('lgc1-v').textContent = lgc1;
+        const lgc2 = new URLSearchParams(window.location.search).get('lgc2');
+        document.getElementById('lgc2-v').textContent = lgc2;
+        const lgc3 = new URLSearchParams(window.location.search).get('lgc3');
+        document.getElementById('lgc3-v').textContent = lgc3;
+        const lgc4 = new URLSearchParams(window.location.search).get('lgc4');
+        document.getElementById('lgc4-v').textContent = lgc4;
+        const lgc5 = new URLSearchParams(window.location.search).get('lgc5');
+        document.getElementById('lgc5-v').textContent = lgc5;
+        const lgc6 = new URLSearchParams(window.location.search).get('lgc6');
+        document.getElementById('lgc6-v').textContent = lgc6;
+        const ttllgc = new URLSearchParams(window.location.search).get('ttllgc');
+        document.getElementById('ttllgc-v').textContent = ttllgc;
+        const spb1 = new URLSearchParams(window.location.search).get('spb1');
+        document.getElementById('spb1-v').textContent = spb1;
+        const spb2 = new URLSearchParams(window.location.search).get('spb2');
+        document.getElementById('spb2-v').textContent = spb2;
+        const spb3 = new URLSearchParams(window.location.search).get('spb3');
+        document.getElementById('spb3-v').textContent = spb3;
+        const ttlspb = new URLSearchParams(window.location.search).get('ttlspb');
+        document.getElementById('ttlspb-v').textContent = ttlspb;
+        const mpb1 = new URLSearchParams(window.location.search).get('mpb1');
+        document.getElementById('mpb1-v').textContent = mpb1;
+        const mpb2 = new URLSearchParams(window.location.search).get('mpb2');
+        document.getElementById('mpb2-v').textContent = mpb2;
+        const mpb3 = new URLSearchParams(window.location.search).get('mpb3');
+        document.getElementById('mpb3-v').textContent = mpb3;
+        const ttlmpb = new URLSearchParams(window.location.search).get('ttlmpb');
+        document.getElementById('ttlmpb-v').textContent = ttlmpb;
+        const lpb1 = new URLSearchParams(window.location.search).get('lpb1');
+        document.getElementById('lpb1-v').textContent = lpb1;
+        const lpb2 = new URLSearchParams(window.location.search).get('lpb2');
+        document.getElementById('lpb2-v').textContent = lpb2;
+        const lpb3 = new URLSearchParams(window.location.search).get('lpb3');
+        document.getElementById('lpb3-v').textContent = lpb3;
+        const ttllpb = new URLSearchParams(window.location.search).get('ttllpb');
+        document.getElementById('ttllpb-v').textContent = ttllpb;
+        const cpb1 = new URLSearchParams(window.location.search).get('cpb1');
+        document.getElementById('cpb1-v').textContent = cpb1;
+        const cpb2 = new URLSearchParams(window.location.search).get('cpb2');
+        document.getElementById('cpb2-v').textContent = cpb2;
+        const cpb3 = new URLSearchParams(window.location.search).get('cpb3');
+        document.getElementById('cpb3-v').textContent = cpb3;
+        const ttlcpb = new URLSearchParams(window.location.search).get('ttlcpb');
+        document.getElementById('ttlcpb-v').textContent = ttlcpb;
+        const kdp1 = new URLSearchParams(window.location.search).get('kdp1');
+        document.getElementById('kdp1-v').textContent = kdp1;
+        const kdp2 = new URLSearchParams(window.location.search).get('kdp2');
+        document.getElementById('kdp2-v').textContent = kdp2;
+        const kdp3 = new URLSearchParams(window.location.search).get('kdp3');
+        document.getElementById('kdp3-v').textContent = kdp3;
+        const ttlkdp = new URLSearchParams(window.location.search).get('ttlkdp');
+        document.getElementById('ttlkdp-v').textContent = ttlkdp;
+        const tgp1 = new URLSearchParams(window.location.search).get('tgp1');
+        document.getElementById('tgp1-v').textContent = tgp1;
+        const tgp2 = new URLSearchParams(window.location.search).get('tgp2');
+        document.getElementById('tgp2-v').textContent = tgp2;
+        const ttltgp = new URLSearchParams(window.location.search).get('ttltgp');
+        document.getElementById('ttltgp-v').textContent = ttltgp;
+        const icecup1 = new URLSearchParams(window.location.search).get('icecup1');
+        document.getElementById('icecup1-v').textContent = icecup1;
+        const icecup2 = new URLSearchParams(window.location.search).get('icecup2');
+        document.getElementById('icecup2-v').textContent = icecup2;
+        const ttlicecup = new URLSearchParams(window.location.search).get('ttlicecup');
+        document.getElementById('ttlicecup-v').textContent = ttlicecup;
+        const kdcup1 = new URLSearchParams(window.location.search).get('kdcup1');
+        document.getElementById('kdcup1-v').textContent = kdcup1;
+        const kdcup2 = new URLSearchParams(window.location.search).get('kdcup2');
+        document.getElementById('kdcup2-v').textContent = kdcup2;
+        const ttlkdcup = new URLSearchParams(window.location.search).get('ttlkdcup');
+        document.getElementById('ttlkdcup-v').textContent = ttlkdcup;
+        const smcup1 = new URLSearchParams(window.location.search).get('smcup1');
+        document.getElementById('smcup1-v').textContent = smcup1;
+        const smcup2 = new URLSearchParams(window.location.search).get('smcup2');
+        document.getElementById('smcup2-v').textContent = smcup2;
+        const ttlsmcup = new URLSearchParams(window.location.search).get('ttlsmcup');
+        document.getElementById('ttlsmcup-v').textContent = ttlsmcup;
+        const mdcup1 = new URLSearchParams(window.location.search).get('mdcup1');
+        document.getElementById('mdcup1-v').textContent = mdcup1;
+        const mdcup2 = new URLSearchParams(window.location.search).get('mdcup2');
+        document.getElementById('mdcup2-v').textContent = mdcup2;
+        const ttlmdcup = new URLSearchParams(window.location.search).get('ttlmdcup');
+        document.getElementById('ttlmdcup-v').textContent = ttlmdcup;
+        const lgcup1 = new URLSearchParams(window.location.search).get('lgcup1');
+        document.getElementById('lgcup1-v').textContent = lgcup1;
+        const lgcup2 = new URLSearchParams(window.location.search).get('lgcup2');
+        document.getElementById('lgcup2-v').textContent = lgcup2;
+        const ttllgcup = new URLSearchParams(window.location.search).get('ttllgcup');
+        document.getElementById('ttllgcup-v').textContent = ttllgcup;
+        const iccup1 = new URLSearchParams(window.location.search).get('iccup1');
+        document.getElementById('iccup1-v').textContent = iccup1;
+        const iccup2 = new URLSearchParams(window.location.search).get('iccup2');
+        document.getElementById('iccup2-v').textContent = iccup2;
+        const ttliccup = new URLSearchParams(window.location.search).get('ttliccup');
+        document.getElementById('ttliccup-v').textContent = ttliccup;
+        const htdg1 = new URLSearchParams(window.location.search).get('htdg1');
+        document.getElementById('htdg1-v').textContent = htdg1;
+        const htdg2 = new URLSearchParams(window.location.search).get('htdg2');
+        document.getElementById('htdg2-v').textContent = htdg2;
+        const ttlhtdg = new URLSearchParams(window.location.search).get('ttlhtdg');
+        document.getElementById('ttlhtdg-v').textContent = ttlhtdg;
+        const pckl1 = new URLSearchParams(window.location.search).get('pckl1');
+        document.getElementById('pckl1-v').textContent = pckl1;
+        const pckl2 = new URLSearchParams(window.location.search).get('pckl2');
+        document.getElementById('pckl2-v').textContent = pckl2;
+        const pckl3 = new URLSearchParams(window.location.search).get('pckl3');
+        document.getElementById('pckl3-v').textContent = pckl3;
+        const ttlpckl = new URLSearchParams(window.location.search).get('ttlpckl');
+        document.getElementById('ttlpckl-v').textContent = ttlpckl;
+        const ncho1 = new URLSearchParams(window.location.search).get('ncho1');
+        document.getElementById('ncho1-v').textContent = ncho1;
+        const ncho2 = new URLSearchParams(window.location.search).get('ncho2');
+        document.getElementById('ncho2-v').textContent = ncho2;
+        const ncho3 = new URLSearchParams(window.location.search).get('ncho3');
+        document.getElementById('ncho3-v').textContent = ncho3;
+        const ttlncho = new URLSearchParams(window.location.search).get('ttlncho');
+        document.getElementById('ttlncho-v').textContent = ttlncho;
+    </script>
+<style>
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    margin: 10mm;
+    width: 269mm;
+    height: 205mm;
+    line-height:16px;
+   }
+   @page {
+    size: auto;   /* auto is the initial value */
+    margin: 0mm;  /* this affects the margin in the printer settings */
+}
+th, td {
+  padding-top: 1mm;
+  padding-bottom: 1mm;
+}
+table, th, td {
+  border: 1px solid;
+  text-align: center;
+}
+table {
+  width: 95%;
+  border-collapse: collapse;
+}
+</style>
+</body>
+</html>
