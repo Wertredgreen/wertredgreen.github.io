@@ -211,6 +211,19 @@
 </div>
 <div class="CountBox">
     <br><br><br>
+    <header class="CountHead">Water Bottles</header>
+    <br><br><br>
+<input type="text"class="textfield" value="" id="wtbl1" name="wtbl1" placeholder="Back Fridge" onkeypress="return isNumber(event)">
+<br><br><br><br>
+<input type="text"class="textfield" value="" id="wtbl2" name="wtbl2" placeholder="Front Fridge" onkeypress="return isNumber(event)">
+<br><br><br><br>
+<input type="text"class="textfield" value="" id="wtbl3" name="wtbl3" placeholder="Stockroom" onkeypress="return isNumber(event)">
+<br><br><br><br>
+<input type="text" id="totalwtbl" class="totals" name="ttlwtbl" value="Total" readonly>
+<br><br><br><br>
+</div>
+<div class="CountBox">
+    <br><br><br>
     <header class="CountHead">Pickles</header>
     <br><br><br>
 <input type="text"class="textfield" value="" id="pckl1" name="pckl1" placeholder="Bucket" onkeypress="return isNumber(event)">
@@ -226,7 +239,7 @@
     <br><br><br>
     <header class="CountHead">Hotdogs</header>
     <br><br><br>
-<input type="text"class="textfield" value="" id="htdg1" name="htdg1" placeholder="Counter" onkeypress="return isNumber(event)">
+<input type="text"class="textfield" value="" id="htdg1" name="htdg1" placeholder="Fridge" onkeypress="return isNumber(event)">
 <br><br><br><br>
 <input type="text"class="textfield" value="" id="htdg2" name="htdg2" placeholder="Stockroom" onkeypress="return isNumber(event)">
 <br><br><br><br>
@@ -274,6 +287,7 @@ function calcSum(){ // Run all the calculation functions
     calcSummdcup();
     calcSumlgcup();
     calcSumiccup();
+    calcSumwtbl();
     calcSumpckl();
     calcSumhtdg();
     calcSumncho();
@@ -386,6 +400,13 @@ function calcSumiccup(){
     let iccup2 = document.getElementById("iccup2").value;
     let sum = Number(iccup1) + Number(iccup2);
     document.getElementById("totaliccup").value = sum;
+    }
+function calcSumwtbl(){
+    let wtbl1 = document.getElementById("wtbl1").value;
+    let wtbl2 = document.getElementById("wtbl2").value;
+    let wtbl3 = document.getElementById("wtbl3").value;
+    let sum = Number(wtbl1) + Number(wtbl2) + Number(wtbl3);
+    document.getElementById("totalwtbl").value = sum;
     }
 function calcSumpckl(){
     let pckl1 = document.getElementById("pckl1").value;
