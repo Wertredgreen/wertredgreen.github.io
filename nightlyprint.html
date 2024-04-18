@@ -69,6 +69,12 @@
             <td><span id="iccup1-v"></span></td><!-- All Other Numbers To Add-->
             <td><span id="ttliccup-v"></span></td> <!-- Total -->
           </tr>
+           <tr>
+            <th>Water Bottle</th> <!-- Name of Item-->
+            <td><span id="wtbl3-v"></span></td> <!-- Amount In Stockroom-->
+            <td><span id="wtbl1-v"></span> + <span id="wtbl2-v"></span></td> <!-- All Other Numbers To Add-->
+            <td><span id="ttlwtbl-v"></span></td> <!-- Total -->
+          </tr>
           <tr>
             <th></th>
           </tr>
@@ -275,6 +281,14 @@
         document.getElementById('iccup2-v').textContent = iccup2;
         const ttliccup = new URLSearchParams(window.location.search).get('ttliccup');
         document.getElementById('ttliccup-v').textContent = ttliccup;
+        const wtbl1 = new URLSearchParams(window.location.search).get('wtbl1');
+        document.getElementById('wtbl1-v').textContent = wtbl1;
+        const wtbl2 = new URLSearchParams(window.location.search).get('wtbl2');
+        document.getElementById('pckl2-v').textContent = wtbl2;
+        const wtbl3 = new URLSearchParams(window.location.search).get('wtbl3');
+        document.getElementById('wtbl3-v').textContent = wtbl3;
+        const ttlwtbl = new URLSearchParams(window.location.search).get('ttlwtbl');
+        document.getElementById('ttlwtbl-v').textContent = ttlwtbl;
         const htdg1 = new URLSearchParams(window.location.search).get('htdg1');
         document.getElementById('htdg1-v').textContent = htdg1;
         const htdg2 = new URLSearchParams(window.location.search).get('htdg2');
