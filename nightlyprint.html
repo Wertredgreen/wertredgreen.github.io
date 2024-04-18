@@ -142,9 +142,7 @@
 
     <script>
         function hideprint(){
-     document.getElementById("buttonhide").style.height = "0px";
-     document.getElementById("buttonhide").style.padding = "0px"; 
-     document.getElementById("buttonhide").style.width = "0px"; // Make Print Button Disappear
+     document.getElementById("buttonhide").style.display = "none"; // Make Print Button Disappear
      window.print();
         }
         var today = new Date();
