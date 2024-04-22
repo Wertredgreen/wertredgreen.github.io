@@ -530,12 +530,22 @@ document.getElementById("htdg2").value = getSavedValue("htdg2");
         function saveValue(e){
             var id = e.id;  // get the sender's id to save it . 
             var val = e.value; // get the value. 
-            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+            localStorage.setItem(id, val);// Every time user writes something, the localStorage's value will override . 
         }
 
         //get the saved value function - return the value of "v" from localStorage. 
         function getSavedValue  (v){
             if (!localStorage.getItem(v)) {
+                // Set the default value to 12 for the input with ID "smc5"
+            if (v === 'smc5') {
+            return '12';
+            }
+            if (v === 'mdc5') {
+            return '15';
+            }
+            if (v === 'lgc5') {
+            return '33';
+            }
                 return "";// You can change this to your defualt value. 
             }
             return localStorage.getItem(v);
