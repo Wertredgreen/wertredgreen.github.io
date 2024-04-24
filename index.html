@@ -267,10 +267,13 @@
 <span id="buttonAppear"></span>
 </form>
 </smbrk>
-    <img src="hotdog.gif" class=hotdoggif alt="animated gif">
+    <button onclick="htdgee()"><img src="hotdog.gif" class=hotdoggif alt="animated gif"></button>
 
 
 <script>
+function htdgee() {
+    document.body.style.backgroundImage = "url('hotdog.gif')";
+}
 function clearreload() {
     localStorage.clear();
     inputShake();
