@@ -9,7 +9,7 @@
 <smbrk>
     <input type="button" value="Clear" id="Calculate" onclick="clearreload()">
 <br><br><br><br>
-<form action="nightlyprint.html" method="GET"> <!-- For Printing At End -->
+<form id="countForm" action="nightlyprint.html" method="GET"> <!-- For Printing At End -->
     <div class="CountBox"> <!-- Start of Counting Textboxes -->
     <br><br><br>
     <header class="CountHead">Small Candies</header>
@@ -271,6 +271,25 @@
 
 
 <script>
+       document.getElementById('countForm').addEventListener('submit', function (event) {
+            // Prevent the form from submitting immediately
+            event.preventDefault();
+
+            // Get all input fields
+            const inputFields = document.querySelectorAll('input[type="number"]');
+
+            // Add red border to input fields with value zero
+            inputFields.forEach((input) => {
+                if (input.value === '0') {
+                    input.classList.add('red-border');
+                } else {
+                    input.classList.remove('red-border');
+                }
+            });
+
+            // Now you can submit the form
+            event.target.submit();
+        });
 function htdgee() {
     document.body.style.backgroundImage = "url('hotdog.gif')";
     var audio = new Audio('https://ia800906.us.archive.org/35/items/tvtunes_9433/Mickey%20Mouse%20Clubhouse%20-%20Hot%20Dogs.mp3');
@@ -698,6 +717,9 @@ textarea {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.red-border {
+  border: 1px solid red;
 }
 </style>
 </div>
