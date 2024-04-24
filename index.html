@@ -267,7 +267,7 @@
 <span id="buttonAppear"></span>
 </form>
 </smbrk>
-    <img src="hotdog.gif" class=hotdoggif alt="animated gif">
+    <img src="hotdog.gif" class=hotdoggif alt="animated gif" onclick="HotdogEasterEgg();>
 
 
 <script>
@@ -284,6 +284,12 @@ function inputShake() {
     const textfields = document.querySelectorAll('.textfield');
     textfields.forEach((element) => {
         element.style.animation = 'inputShake 0.3s';
+    });
+}
+function HotdogEasterEgg() {
+    const backgroundhd = document.querySelector('body');
+    backgroundhd.forEach((element) => {
+        element.style.backgroundImage = 'url('hotdog.gif')';
     });
 }
 
