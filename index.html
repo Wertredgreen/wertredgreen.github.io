@@ -276,19 +276,25 @@
             event.preventDefault();
 
             // Get all input fields
-            const inputFields = document.querySelectorAll('input[type="number"]');
+            const inputFields = document.querySelectorAll('.textfield');
 
             // Add red border to input fields with value zero
+            let isEmpty = false;
             inputFields.forEach((input) => {
-                if (input.value === '0') {
+                if (input.value === '') {
                     input.classList.add('red-border');
+                     isEmpty = true;
                 } else {
                     input.classList.remove('red-border');
                 }
             });
-
-            // Now you can submit the form
-            event.target.submit();
+           // If any input field is empty, prevent form submission
+            if (isEmpty) {
+                alert("You forgot some numbers! Even if it's 0, you gotta put it :)");
+            } else {
+                // Now you can submit the form
+                event.target.submit();
+            }
         });
 function htdgee() {
     document.body.style.backgroundImage = "url('hotdog.gif')";
