@@ -5,7 +5,9 @@
 </head>
 <body>
 <div class="content">
-    <h2 id="nightlyinvhead">Stargazer 5 Nightly Inventory</h2><br>
+    <h2 id="nightlyinvhead" style="text-align: center;">Stargazer 5 Nightly Inventory</h2>
+    <br><br><br>
+    <!--<input type="button" class="spoils" value="Spoils" id="spoils" onclick="spoilsmenu()">-->
 <smbrk>
     <input type="button" value="Clear" id="Calculate" onclick="clearreload()">
 <br><br><br><br>
@@ -258,7 +260,18 @@
 <br><br><br><br>
 <input type="number" class="textfield" value="" id="ncho3" name="ncho3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" id="totalncho" class="totals" name="ttlncho" placeholder="Total">
+<input type="number" id="totalncho" class="totals" name="ttlncho" placeholder="Total" readonly>
+<br><br><br><br>
+</div>
+<div class="CountBox">
+    <br><br><br>
+    <header class="CountHead">Ghostbusters Cups</header>
+    <br><br><br>
+<input type="number" class="textfield" value="" id="gbcp1" name="gbcp1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<br><br><br><br>
+<input type="number" class="textfield" value="" id="gbcp2" name="gbcp2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<br><br><br><br>
+<input type="number" id="totalgbcp" class="totals" name="ttlgbcp" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
 <br><br><br><br>
@@ -268,7 +281,7 @@
 </form>
 </smbrk>
     <button class=hotdoggif onclick="htdgee()"><img src="hotdog.gif" alt="animated gif"></button>
-
+    <br><br><br><br><br>
 
 <script>
        document.getElementById('countForm').addEventListener('submit', function (event) {
@@ -296,6 +309,9 @@
                 event.target.submit();
             }
         });
+function spoilsmenu() {
+    alert("Spoils");
+}
 function htdgee() {
     document.body.style.backgroundImage = "url('hotdog.gif')";
     var audio = new Audio('https://ia800906.us.archive.org/35/items/tvtunes_9433/Mickey%20Mouse%20Clubhouse%20-%20Hot%20Dogs.mp3');
@@ -340,6 +356,7 @@ function calcSum(){ // Run all the calculation functions
     calcSumpckl();
     calcSumhtdg();
     calcSumncho();
+    calcSumgbcp();
     printAppear();
 }
 function calcSumsmc(){ // Calculation function, add all textboxes for each section together, this one is Small Candies
@@ -477,8 +494,12 @@ function calcSumncho(){
     let sum = Number(ncho1) + Number(ncho2) + Number(ncho3);
     document.getElementById("totalncho").value = sum;
     }
-
-
+function calcSumgbcp(){
+    let gbcp1 = document.getElementById("gbcp1").value;
+    let gbcp2 = document.getElementById("gbcp2").value;
+    let sum = Number(gbcp1) + Number(gbcp2);
+    document.getElementById("totalgbcp").value = sum;
+    }
 
 function isNumber(evt) { // Prevent non-numbers from being entered into textboxes
     evt = (evt) ? evt : window.event;
@@ -567,7 +588,9 @@ document.getElementById("iccup2").value = getSavedValue("iccup2");
 document.getElementById("htdg1").value = getSavedValue("htdg1");
 document.getElementById("htdg2").value = getSavedValue("htdg2");
 
-        /* Here you can add more inputs to set value. if it's saved */
+document.getElementById("gbcp1").value = getSavedValue("gbcp1");
+document.getElementById("gbcp2").value = getSavedValue("gbcp2");
+
 
         //Save the value function - save it to localStorage as (ID, VALUE)
         function saveValue(e){
@@ -603,10 +626,17 @@ smbrk{
     line-height: 0.25;
 }
 #nightlyinvhead{
-    text-align: center;
+    left: 50%;
+    padding-top: 8px;
+    margin-top: -8px;
+    margin-left: -158px;
     margin-bottom:2px;
     border-bottom: 2px solid rgb(66, 66, 66);
     color:#c2c2c2;
+    position: fixed;
+    width:320px;
+    background-color:  rgb(22, 22, 24);
+    z-index: 9;
 }
 .CountHead{
     min-width: 320px;
@@ -728,6 +758,20 @@ textarea {
 }
 .red-border {
   border: 1px solid red;
+}
+.spoils{
+    width: 320px;
+    height: 60px;
+    position: fixed;
+    margin: auto;
+    bottom: 20px;
+    z-index: 9;
+    left: 50%;
+    transform:translateX(-50%);
+    margin-left: 2px;
+}
+.spoils {
+    margin-left: 2px;
 }
 </style>
 </div>

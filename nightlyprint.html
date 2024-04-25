@@ -136,6 +136,12 @@
             <td>&zwj;<span id="tgp1-v"></span> + <span id="tgp2-v"></span>&zwj;</td> <!-- All Other Numbers To Add-->
             <td>&zwj;<span id="ttltgp-v"></span>&zwj;</td> <!-- Total -->
           </tr>
+          <tr>
+            <th>Ghostbusters Cup</th> <!-- Name of Item-->
+            <td>&zwj;0&zwj;</td> <!-- Amount In Stockroom-->
+            <td>&zwj;<span id="gbcp1-v"></span> + <span id="gbcp2-v"></span>&zwj;</td> <!-- All Other Numbers To Add-->
+            <td>&zwj;<span id="ttlgbcp-v"></span>&zwj;</td> <!-- Total -->
+          </tr>
       </table>
       <br>
       <input type="button" id="buttonhide" style="font-size : 24px;" class="printbutton" value="Print this page" onClick="hideprint()">
@@ -310,6 +316,12 @@
         document.getElementById('ncho3-v').textContent = ncho3;
         const ttlncho = new URLSearchParams(window.location.search).get('ttlncho');
         document.getElementById('ttlncho-v').textContent = ttlncho;
+        const gbcp1 = new URLSearchParams(window.location.search).get('gbcp1');
+        document.getElementById('gbcp1-v').textContent = gbcp1;
+        const gbcp2 = new URLSearchParams(window.location.search).get('gbcp2');
+        document.getElementById('gbcp2-v').textContent = gbcp2;
+        const ttlgbcp = new URLSearchParams(window.location.search).get('ttlgbcp');
+        document.getElementById('ttlgbcp-v').textContent = ttlgbcp;
     </script>
 <style>
 html, body { 
