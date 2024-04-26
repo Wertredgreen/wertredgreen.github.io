@@ -1,10 +1,10 @@
 <html lang="en">
     <head>
 <body>
-
-<button id="yourButtonId">Hi</button>
+<smbrk>
+<input type="button" value="Add Item" id="yourButtonId" class="spoils">
 <form id="yourElementId"></form>
-
+</smbrk>
 </body>
 
 
@@ -21,7 +21,7 @@ function addNewTemplate(numInputs, countBoxHeader) {
     
     for (var i = 1; i <= numInputs; i++) {
         template += `
-        <input type="number" class="textfield" value="" id="nwitm${totalTemplates}${i}" name="nwitm${totalTemplates}${i}" placeholder="Amount ${i}" onkeypress="return isNumber(event)" onchange='saveValue(this);'> 
+        <input type="number" class="textfield" value="" id="nwitm${totalTemplates}_${i}" name="nwitm${totalTemplates}_${i}" placeholder="Amount ${i}" onkeypress="return isNumber(event)" onchange='saveValue(this);'> 
         <br><br><br><br>`;
     }
     
@@ -36,8 +36,8 @@ function addNewTemplate(numInputs, countBoxHeader) {
 
 // Attach the function to your button
 document.getElementById("yourButtonId").addEventListener("click", function() {
-    var numInputs = prompt("How many inputs do you want to add?");
     var countBoxHeader = prompt("What should the CountBox header be?");
+    var numInputs = prompt("How many inputs do you want to add?");
     addNewTemplate(numInputs, countBoxHeader);
 });
 </script>
