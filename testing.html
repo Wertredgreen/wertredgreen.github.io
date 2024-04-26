@@ -1,0 +1,202 @@
+<html lang="en">
+    <head>
+<body>
+
+<button id="yourButtonId">Hi</button>
+<form id="yourElementId"></form>
+
+</body>
+
+
+<script>
+var totalTemplates = 0;
+
+function addNewTemplate(numInputs, countBoxHeader) {
+    totalTemplates++;
+    var template = `
+    <div class="CountBox">
+        <br><br><br>
+        <header class="CountHead">${countBoxHeader}</header>
+        <br><br><br>`;
+    
+    for (var i = 1; i <= numInputs; i++) {
+        template += `
+        <input type="number" class="textfield" value="" id="nwitm${totalTemplates}${i}" name="nwitm${totalTemplates}${i}" placeholder="Amount ${i}" onkeypress="return isNumber(event)" onchange='saveValue(this);'> 
+        <br><br><br><br>`;
+    }
+    
+    template += `
+        <input type="number" id="totalnwitm${totalTemplates}" class="totals" name="ttlnwitm${totalTemplates}" placeholder="Total" readonly>
+        <br><br><br><br>
+    </div>`;
+    
+    // Insert the new template at a specific location in the document
+    document.getElementById("yourElementId").insertAdjacentHTML('beforeend', template);
+}
+
+// Attach the function to your button
+document.getElementById("yourButtonId").addEventListener("click", function() {
+    var numInputs = prompt("How many inputs do you want to add?");
+    var countBoxHeader = prompt("What should the CountBox header be?");
+    addNewTemplate(numInputs, countBoxHeader);
+});
+</script>
+
+<style>
+    body{
+        background-color: rgb(22, 22, 24);
+    }
+    smbrk{
+        line-height: 0.25;
+    }
+    #nightlyinvhead{
+        left: 50%;
+        padding-top: 8px;
+        margin-top: -8px;
+        margin-left: -158px;
+        margin-bottom:2px;
+        border-bottom: 2px solid rgb(66, 66, 66);
+        color:#c2c2c2;
+        position: fixed;
+        width:320px;
+        background-color:  rgb(22, 22, 24);
+        z-index: 9;
+    }
+    .CountHead{
+        min-width: 320px;
+        text-align: center;
+        color:#c2c2c2;
+    }
+    .CountBox{
+        width: 320px;
+        margin: auto;
+        background-color: rgb(22, 22, 24);
+        border: 2px solid rgb(66, 66, 66);
+    }
+    input{
+        background-color: #292929;
+        color: rgb(209, 209, 209);
+        position: relative;
+        left: 50%;
+        transform:translateX(-50%);
+        font-size: 16px;
+    }
+    textarea {
+        font-size: 16px;
+    }
+    .totals{
+        background-color: #4d4d4d;
+    }
+    #Calculate, #Print{
+        width: 75%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    /* Print Button fade in/grow */
+    #Print{
+        animation: fadeIn 1s;
+      -webkit-animation: fadeIn 1s;
+      -moz-animation: fadeIn 1s;
+      -o-animation: fadeIn 1s;
+      -ms-animation: fadeIn 1s;
+    }
+    
+    @keyframes fadeIn {
+      0% { opacity: 0;
+        width: 0%;
+        padding-top: 0px;
+        padding-bottom: 0px}
+        100% { opacity: 1;
+        width: 75%;
+        padding-top: 10px;
+        padding-bottom: 10px}
+    }
+    
+    @-moz-keyframes fadeIn {
+        0% { opacity: 0;
+        width: 0%;
+        padding-top: 0px;
+        padding-bottom: 0px}
+        100% { opacity: 1;
+        width: 75%;
+        padding-top: 10px;
+        padding-bottom: 10px}
+    }
+    
+    @-webkit-keyframes fadeIn {
+        0% { opacity: 0;
+        width: 0%;
+        padding-top: 0px;
+        padding-bottom: 0px}
+        100% { opacity: 1;
+        width: 75%;
+        padding-top: 10px;
+        padding-bottom: 10px}
+    }
+    
+    @-o-keyframes fadeIn {
+        0% { opacity: 0;
+        width: 0%;
+        padding-top: 0px;
+        padding-bottom: 0px}
+        100% { opacity: 1;
+        width: 75%;
+        padding-top: 10px;
+        padding-bottom: 10px}
+    }
+    
+    @-ms-keyframes fadeIn {
+        0% { opacity: 0;
+        width: 0%;
+        padding-top: 0px;
+        padding-bottom: 0px}
+        100% { opacity: 1;
+        width: 75%;
+        padding-top: 10px;
+        padding-bottom: 10px}
+    }
+    /* Print Button fade in/grow END */
+    
+    @keyframes inputShake {
+     0% { transform: translateX(-50%) }
+     25% { transform: translateX(-45%) }
+     50% { transform: translateX(-55%) }
+     75% { transform: translateX(-45%) }
+     100% { transform: translateX(-50%) }
+    }
+    
+    ::placeholder {
+      color: rgb(129, 129, 129);
+      opacity: 1;
+    }
+    .content {
+      max-width: 320px;
+      margin: auto;
+    }
+    .hotdoggif {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background: none;
+      border: none;
+    }
+    .red-border {
+      border: 1px solid red;
+    }
+    .spoils{
+        width: 320px;
+        height: 60px;
+        position: fixed;
+        margin: auto;
+        bottom: 20px;
+        z-index: 9;
+        left: 50%;
+        transform:translateX(-50%);
+        margin-left: 2px;
+    }
+    .spoils {
+        margin-left: 2px;
+    }
+    </style>
+    </head>
+</html>
