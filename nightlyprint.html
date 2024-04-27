@@ -6,7 +6,7 @@
 </head>
 <body>
     <br><br>
-    <table>
+    <table id="countSheet">
         <tr>
             <th colspan="4" style="text-align: center;">Stargazer 5 Nightly Inventory: <span id="Date"></span></th>
         </tr>
@@ -136,15 +136,10 @@
             <td>&zwj;<span id="tgp1-v"></span> + <span id="tgp2-v"></span>&zwj;</td> <!-- All Other Numbers To Add-->
             <td>&zwj;<span id="ttltgp-v"></span>&zwj;</td> <!-- Total -->
           </tr>
-          <tr>
-            <th>Ghostbusters Cup</th> <!-- Name of Item-->
-            <td>&zwj;0&zwj;</td> <!-- Amount In Stockroom-->
-            <td>&zwj;<span id="gbcp1-v"></span> + <span id="gbcp2-v"></span>&zwj;</td> <!-- All Other Numbers To Add-->
-            <td>&zwj;<span id="ttlgbcp-v"></span>&zwj;</td> <!-- Total -->
-          </tr>
       </table>
       <br>
       <input type="button" id="buttonhide" style="font-size : 24px;" class="printbutton" value="Print this page" onClick="hideprint()">
+      <input type="button" id="buttonhide" style="font-size : 24px;" class="printbutton" value="Add Sections" onClick="addSections()">
 
     <script>
         function hideprint(){
@@ -322,6 +317,35 @@
         document.getElementById('gbcp2-v').textContent = gbcp2;
         const ttlgbcp = new URLSearchParams(window.location.search).get('ttlgbcp');
         document.getElementById('ttlgbcp-v').textContent = ttlgbcp;
+        const nwtitm1_1 = new URLSearchParams(window.location.search).get('nwtitm1_1');
+        document.getElementById('nwtitm1_1-v').textContent = nwtitm1_1;
+        const nwtitm1_2 = new URLSearchParams(window.location.search).get('nwtitm1_2');
+        document.getElementById('nwtitm1_2-v').textContent = nwtitm1_2;
+        const ttlnwitm1 = new URLSearchParams(window.location.search).get('ttlnwitm1');
+        document.getElementById('ttlnwitm1-v').textContent = ttlnwitm1;
+        
+    function addSections(){  
+    var urlParams = new URLSearchParams(window.location.search);
+    var numSpans = urlParams.get('numSpansitm1');
+    var template = `
+    <tr>
+        <th><span id="nwitemhdr1-v"></span></th> <!-- Name of Item-->
+        <td>&zwj;0&zwj;</td> <!-- Amount In Stockroom-->
+        <td>&zwj;`;
+
+    for (var i = 1; i <= numSpans; i++) {
+        template += `<span id="nwitm1_${i}-v"></span>`;
+        if (i < numSpans) {
+            template += ' + ';
+    }
+  }
+template += `&zwj;</td> <!-- All Other Numbers To Add-->
+    <td>&zwj;<span id="ttlnwitm1-v"></span>&zwj;</td> <!-- Total -->
+    </tr>`;
+
+        // Insert the new template at a specific location in the document
+        document.getElementById("countSheet").insertAdjacentHTML('beforeend', template);
+  }
     </script>
 <style>
 html, body { 

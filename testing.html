@@ -2,8 +2,9 @@
     <head>
 <body>
 <smbrk>
-<input type="button" value="Add Item" id="yourButtonId" class="spoils">
-<form id="yourElementId"></form>
+<input type="button" value="Add Item" id="addItem" class="addItem">
+<form id="countForm"></form>
+<input type="button" value="Calculate" id="Calculate" class="Calculate" onclick="calcTotal()">
 </smbrk>
 </body>
 
@@ -11,17 +12,17 @@
 <script>
 var totalTemplates = 0;
 
-function addNewTemplate(numInputs, countBoxHeader) {
+function addNewItem(numInputs, countBoxHeader) {
     totalTemplates++;
     var template = `
-    <div class="CountBox">
+    <div class="CountBox" id="newitem${totalTemplates}"">
         <br><br><br>
-        <header class="CountHead">${countBoxHeader}</header>
+        <input type="text" class="CountHead inpHeadr" value="${countBoxHeader}" name="nwitemhdr${totalTemplates}" readonly>
         <br><br><br>`;
     
     for (var i = 1; i <= numInputs; i++) {
-        template += `
-        <input type="number" class="textfield" value="" id="nwitm${totalTemplates}_${i}" name="nwitm${totalTemplates}_${i}" placeholder="Amount ${i}" onkeypress="return isNumber(event)" onchange='saveValue(this);'> 
+        template += ` <input type="text" class="CountHead numberspans" value="" name="numSpansitm${i}" readonly>
+        <input type="number" class="textfield newitmcls${totalTemplates}" value="" id="nwitm${totalTemplates}_${i}" name="nwitm${totalTemplates}_${i}" placeholder="Amount ${i}" onkeypress="return isNumber(event)" onchange='saveValue(this);'> 
         <br><br><br><br>`;
     }
     
@@ -31,15 +32,78 @@ function addNewTemplate(numInputs, countBoxHeader) {
     </div>`;
     
     // Insert the new template at a specific location in the document
-    document.getElementById("yourElementId").insertAdjacentHTML('beforeend', template);
+    document.getElementById("countForm").insertAdjacentHTML('beforeend', template);
 }
 
 // Attach the function to your button
-document.getElementById("yourButtonId").addEventListener("click", function() {
-    var countBoxHeader = prompt("What should the CountBox header be?");
+document.getElementById("addItem").addEventListener("click", function() {
+    var countBoxHeader = prompt("What is the Item?");
     var numInputs = prompt("How many inputs do you want to add?");
-    addNewTemplate(numInputs, countBoxHeader);
+    addNewItem(numInputs, countBoxHeader);
 });
+
+function calcTotal(){
+var element =  document.getElementById('newitem1');
+if (typeof(element) != 'undefined' && element != null)
+{
+  var arr = document.getElementsByClassName('newitmcls1');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalnwitm1').value = tot;
+}
+
+var element =  document.getElementById('newitem2');
+if (typeof(element) != 'undefined' && element != null)
+{
+  var arr = document.getElementsByClassName('newitmcls2');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalnwitm2').value = tot;
+}
+}
+
+ //Save the value function - save it to localStorage as (ID, VALUE)
+ function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writes something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                // Set the default value to 12 for the input with ID "smc5"
+            if (v === 'smc5') {
+            return '12';
+            }
+            if (v === 'mdc5') {
+            return '15';
+            }
+            if (v === 'lgc5') {
+            return '33';
+            }
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+        function isNumber(evt) { // Prevent non-numbers from being entered into textboxes
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
 </script>
 
 <style>
@@ -66,6 +130,20 @@ document.getElementById("yourButtonId").addEventListener("click", function() {
         min-width: 320px;
         text-align: center;
         color:#c2c2c2;
+    }
+    .inpHeadr{
+        background: none;
+        border: none;
+    }
+    .inpHeadr:focus{
+        background: none;
+        border: none;
+        outline: none;
+    }
+    .numberspans {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
     }
     .CountBox{
         width: 320px;

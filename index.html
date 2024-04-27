@@ -7,6 +7,7 @@
 <div class="content">
     <h2 id="nightlyinvhead" style="text-align: center;">Stargazer 5 Nightly Inventory</h2>
     <br><br><br>
+    <input type="button" value="Add Item" id="addItem" class="addItem">
     <!--<input type="button" class="spoils" value="Spoils" id="spoils" onclick="spoilsmenu()">-->
 <smbrk>
     <input type="button" value="Clear" id="Calculate" onclick="clearreload()">
@@ -16,19 +17,19 @@
     <br><br><br>
     <header class="CountHead">Small Candies</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="smc1" name="smc1" placeholder="Station 1" onkeypress="return isNumber(event)" onchange='saveValue(this);'> 
+<input type="number" class="textfield smc" value="" id="smc1" name="smc1" placeholder="Station 1" onkeypress="return isNumber(event)" onchange='saveValue(this);'> 
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="smc2" name="smc2" placeholder="Station 2" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield smc" value="" id="smc2" name="smc2" placeholder="Station 2" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="smc3" name="smc3" placeholder="Station 3" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield smc" value="" id="smc3" name="smc3" placeholder="Station 3" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="smc7" name="smc7" placeholder="Applesauce" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield smc" value="" id="smc7" name="smc7" placeholder="Applesauce" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="smc4" name="smc4" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield smc" value="" id="smc4" name="smc4" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="12" id="smc5" name="smc5" placeholder="Glass" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield smc" value="12" id="smc5" name="smc5" placeholder="Glass" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="smc6" name="smc6" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield smc" value="" id="smc6" name="smc6" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br><br>
 <input type="number" id="totalsmcandy" class="totals" name="ttlsmc" placeholder="Total" readonly> <!-- Set to ReadOnly so Total can't be modified by mistake -->
 <br><br><br><br>
@@ -37,17 +38,17 @@
     <br><br><br>
     <header class="CountHead">Medium Candies</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="mdc1" name="mdc1" placeholder="Station 1" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mdc" value="" id="mdc1" name="mdc1" placeholder="Station 1" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="mdc2" name="mdc2" placeholder="Station 2" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mdc" value="" id="mdc2" name="mdc2" placeholder="Station 2" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="mdc3" name="mdc3" placeholder="Station 3" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mdc" value="" id="mdc3" name="mdc3" placeholder="Station 3" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="mdc4" name="mdc4" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mdc" value="" id="mdc4" name="mdc4" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="15" id="mdc5" name="mdc5" placeholder="Glass" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mdc" value="15" id="mdc5" name="mdc5" placeholder="Glass" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="mdc6" name="mdc6" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mdc" value="" id="mdc6" name="mdc6" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br><br>
 <input type="number" id="totalmdcandy" class="totals" name="ttlmdc" placeholder="Total" readonly>
 <br><br><br><br>
@@ -56,17 +57,17 @@
     <br><br><br>
     <header class="CountHead">Large Candies</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="lgc1" name="lgc1" placeholder="Station 1" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lgc" value="" id="lgc1" name="lgc1" placeholder="Station 1" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="lgc2" name="lgc2" placeholder="Station 2" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lgc" value="" id="lgc2" name="lgc2" placeholder="Station 2" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="lgc3" name="lgc3" placeholder="Station 3" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lgc" value="" id="lgc3" name="lgc3" placeholder="Station 3" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="lgc4" name="lgc4" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lgc" value="" id="lgc4" name="lgc4" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="33" id="lgc5" name="lgc5" placeholder="Glass" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lgc" value="33" id="lgc5" name="lgc5" placeholder="Glass" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="lgc6" name="lgc6" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lgc" value="" id="lgc6" name="lgc6" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br><br>
 <input type="number" id="totallgcandy" class="totals" name="ttllgc" placeholder="Total" readonly>
 <br><br><br><br>
@@ -75,11 +76,11 @@
     <br><br><br>
     <header class="CountHead">Small Bags</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="spb1" name="spb1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield spb" value="" id="spb1" name="spb1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="spb2" name="spb2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield spb" value="" id="spb2" name="spb2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="spb3" name="spb3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield spb" value="" id="spb3" name="spb3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalsmbag" class="totals" name="ttlspb" placeholder="Total" readonly>
 <br><br><br><br>
@@ -88,11 +89,11 @@
     <br><br><br>
     <header class="CountHead">Medium Bags</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="mpb1" name="mpb1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mpb" value="" id="mpb1" name="mpb1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="mpb2" name="mpb2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mpb" value="" id="mpb2" name="mpb2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="mpb3" name="mpb3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mpb" value="" id="mpb3" name="mpb3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalmdbag" class="totals" name="ttlmpb" placeholder="Total" readonly>
 <br><br><br><br>
@@ -101,11 +102,11 @@
     <br><br><br>
     <header class="CountHead">Large Bags</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="lpb1" name="lpb1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lpb" value="" id="lpb1" name="lpb1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="lpb2" name="lpb2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lpb" value="" id="lpb2" name="lpb2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="lpb3" name="lpb3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lpb" value="" id="lpb3" name="lpb3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totallgbag" class="totals" name="ttllpb" placeholder="Total" readonly>
 <br><br><br><br>
@@ -114,11 +115,11 @@
     <br><br><br>
     <header class="CountHead">Combo Bags</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="cpb1" name="cpb1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield cpb" value="" id="cpb1" name="cpb1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="cpb2" name="cpb2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield cpb" value="" id="cpb2" name="cpb2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="cpb3" name="cpb3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield cpb" value="" id="cpb3" name="cpb3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalcombag" class="totals" name="ttlcpb" placeholder="Total" readonly>
 <br><br><br><br>
@@ -127,11 +128,11 @@
     <br><br><br>
     <header class="CountHead">Kid Packs</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="kdp1" name="kdp1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield kdp" value="" id="kdp1" name="kdp1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="kdp2" name="kdp2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield kdp" value="" id="kdp2" name="kdp2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="kdp3" name="kdp3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield kdp" value="" id="kdp3" name="kdp3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalkdp" class="totals" name="ttlkdp" placeholder="Total" readonly>
 <br><br><br><br>
@@ -140,9 +141,9 @@
     <br><br><br>
     <header class="CountHead">To-Go Bags</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="tgp1" name="tgp1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield tgp" value="" id="tgp1" name="tgp1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="tgp2" name="tgp2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield tgp" value="" id="tgp2" name="tgp2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totaltgp" class="totals" name="ttltgp" placeholder="Total" readonly>
 <br><br><br><br>
@@ -151,9 +152,9 @@
     <br><br><br>
     <header class="CountHead">Ice Cups</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="icecup1" name="icecup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield icecup" value="" id="icecup1" name="icecup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="icecup2" name="icecup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield icecup" value="" id="icecup2" name="icecup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalicecup" class="totals" name="ttlicecup" placeholder="Total" readonly>
 <br><br><br><br>
@@ -162,9 +163,9 @@
     <br><br><br>
     <header class="CountHead">Kid Cups</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="kdcup1" name="kdcup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield kdcup" value="" id="kdcup1" name="kdcup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="kdcup2" name="kdcup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield kdcup" value="" id="kdcup2" name="kdcup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalkdcup" class="totals" name="ttlkdcup" placeholder="Total" readonly>
 <br><br><br><br>
@@ -173,9 +174,9 @@
     <br><br><br>
     <header class="CountHead">Small Cups</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="smcup1" name="smcup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield smcup" value="" id="smcup1" name="smcup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="smcup2" name="smcup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield smcup" value="" id="smcup2" name="smcup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalsmcup" class="totals" name="ttlsmcup" placeholder="Total" readonly>
 <br><br><br><br>
@@ -184,9 +185,9 @@
     <br><br><br>
     <header class="CountHead">Medium Cups</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="mdcup1" name="mdcup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mdcup" value="" id="mdcup1" name="mdcup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="mdcup2" name="mdcup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield mdcup" value="" id="mdcup2" name="mdcup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalmdcup" class="totals" name="ttlmdcup" placeholder="Total" readonly>
 <br><br><br><br>
@@ -195,9 +196,9 @@
     <br><br><br>
     <header class="CountHead">Large Cups</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="lgcup1" name="lgcup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lgcup" value="" id="lgcup1" name="lgcup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="lgcup2" name="lgcup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield lgcup" value="" id="lgcup2" name="lgcup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totallgcup" class="totals" name="ttllgcup" placeholder="Total" readonly>
 <br><br><br><br>
@@ -206,9 +207,9 @@
     <br><br><br>
     <header class="CountHead">Icee Cups</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="iccup1" name="iccup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield iccup" value="" id="iccup1" name="iccup1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="iccup2" name="iccup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield iccup" value="" id="iccup2" name="iccup2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totaliccup" class="totals" name="ttliccup" placeholder="Total" readonly>
 <br><br><br><br>
@@ -217,11 +218,11 @@
     <br><br><br>
     <header class="CountHead">Water Bottles</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="wtbl1" name="wtbl1" placeholder="Back Fridge" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield wtbl" value="" id="wtbl1" name="wtbl1" placeholder="Back Fridge" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="wtbl2" name="wtbl2" placeholder="Front Fridge" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield wtbl" value="" id="wtbl2" name="wtbl2" placeholder="Front Fridge" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="wtbl3" name="wtbl3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield wtbl" value="" id="wtbl3" name="wtbl3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalwtbl" class="totals" name="ttlwtbl" placeholder="Total" readonly>
 <br><br><br><br>
@@ -230,11 +231,11 @@
     <br><br><br>
     <header class="CountHead">Pickles</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="pckl1" name="pckl1" placeholder="Bucket" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield pckl" value="" id="pckl1" name="pckl1" placeholder="Bucket" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="pckl2" name="pckl2" placeholder="Fridge" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield pckl" value="" id="pckl2" name="pckl2" placeholder="Fridge" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="pckl3" name="pckl3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield pckl" value="" id="pckl3" name="pckl3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalpckl" class="totals" name="ttlpckl" placeholder="Total" readonly>
 <br><br><br><br>
@@ -243,9 +244,9 @@
     <br><br><br>
     <header class="CountHead">Hotdogs</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="htdg1" name="htdg1" placeholder="Fridge" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield htdg" value="" id="htdg1" name="htdg1" placeholder="Fridge" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="htdg2" name="htdg2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield htdg" value="" id="htdg2" name="htdg2" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalhtdg" class="totals" name="ttlhtdg" placeholder="Total" readonly>
 <br><br><br><br>
@@ -254,36 +255,27 @@
     <br><br><br>
     <header class="CountHead">Nachos</header>
     <br><br><br>
-<input type="number" class="textfield" value="" id="ncho1" name="ncho1" placeholder="Machine" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield ncho" value="" id="ncho1" name="ncho1" placeholder="Machine" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="ncho2" name="ncho2" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield ncho" value="" id="ncho2" name="ncho2" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
-<input type="number" class="textfield" value="" id="ncho3" name="ncho3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
+<input type="number" class="textfield ncho" value="" id="ncho3" name="ncho3" placeholder="Stockroom" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
 <br><br><br><br>
 <input type="number" id="totalncho" class="totals" name="ttlncho" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<div class="CountBox">
-    <br><br><br>
-    <header class="CountHead">Ghostbusters Cups</header>
-    <br><br><br>
-<input type="number" class="textfield" value="" id="gbcp1" name="gbcp1" placeholder="Counter" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
-<br><br><br><br>
-<input type="number" class="textfield" value="" id="gbcp2" name="gbcp2" placeholder="Office" onkeypress="return isNumber(event)" onchange='saveValue(this);'>
-<br><br><br><br>
-<input type="number" id="totalgbcp" class="totals" name="ttlgbcp" placeholder="Total" readonly>
-<br><br><br><br>
-</div>
+</form>
 <br><br><br><br>
 <input type="button" value="Calculate" id="Calculate" onclick="calcSum()">
 <br><br><br><br>
 <span id="buttonAppear"></span>
-</form>
 </smbrk>
     <button class=hotdoggif onclick="htdgee()"><img src="hotdog.gif" alt="animated gif"></button>
     <br><br><br><br><br>
 
 <script>
+var totalTemplates = 0;
+
        document.getElementById('countForm').addEventListener('submit', function (event) {
             // Prevent the form from submitting immediately
             event.preventDefault();
@@ -312,6 +304,35 @@
 function spoilsmenu() {
     alert("Spoils");
 }
+function addNewItem(numInputs, countBoxHeader) {
+    totalTemplates++;
+    var template = ` <input type="text" class="CountHead numberspans" value="${numInputs}" name="numSpansitm${totalTemplates}" readonly>
+    <div class="CountBox" id="newitem${totalTemplates}"">
+        <br><br><br>
+        <input type="text" class="CountHead inpHeadr" value="${countBoxHeader}" name="nwitemhdr${totalTemplates}" readonly>
+        <br><br><br>`;
+    
+    for (var i = 1; i <= numInputs; i++) {
+        template += `
+        <input type="number" class="textfield newitmcls${totalTemplates}" value="" id="nwitm${totalTemplates}_${i}" name="nwitm${totalTemplates}_${i}" placeholder="Amount ${i}" onkeypress="return isNumber(event)" onchange='saveValue(this);'> 
+        <br><br><br><br>`;
+    }
+    
+    template += `
+        <input type="number" id="totalnwitm${totalTemplates}" class="totals" name="ttlnwitm${totalTemplates}" placeholder="Total" readonly>
+        <br><br><br><br>
+    </div>`;
+    
+    // Insert the new template at a specific location in the document
+    document.getElementById("countForm").insertAdjacentHTML('beforeend', template);
+}
+
+// Attach the function to your button
+document.getElementById("addItem").addEventListener("click", function() {
+    var countBoxHeader = prompt("What is the Item?");
+    var numInputs = prompt("How many inputs do you want to add?");
+    addNewItem(numInputs, countBoxHeader);
+});
 function htdgee() {
     document.body.style.backgroundImage = "url('hotdog.gif')";
     var audio = new Audio('https://ia800906.us.archive.org/35/items/tvtunes_9433/Mickey%20Mouse%20Clubhouse%20-%20Hot%20Dogs.mp3');
@@ -334,172 +355,261 @@ function inputShake() {
 }
 
 function printAppear(){
-     document.getElementById("buttonAppear").innerHTML = '<input type="submit" value="Print" id="Print">'; // Make Print Button Appear
+     document.getElementById("buttonAppear").innerHTML = '<input type="submit" value="Print" id="Print" form="countForm">'; // Make Print Button Appear
 }
 function calcSum(){ // Run all the calculation functions
-    calcSumsmc();
-    calcSummdc();
-    calcSumlgc();
-    calcSumspb();
-    calcSummpb();
-    calcSumlpb();
-    calcSumcpb();
-    calcSumkdp();
-    calcSumtgp();
-    calcSumicecup();
-    calcSumkdcup();
-    calcSumsmcup();
-    calcSummdcup();
-    calcSumlgcup();
-    calcSumiccup();
-    calcSumwtbl();
-    calcSumpckl();
-    calcSumhtdg();
-    calcSumncho();
-    calcSumgbcp();
+    calcTotal();
     printAppear();
 }
-function calcSumsmc(){ // Calculation function, add all textboxes for each section together, this one is Small Candies
-    let smc1 = document.getElementById("smc1").value;
-    let smc2 = document.getElementById("smc2").value;
-    let smc3 = document.getElementById("smc3").value;
-    let smc4 = document.getElementById("smc4").value;
-    let smc5 = document.getElementById("smc5").value;
-    let smc6 = document.getElementById("smc6").value;
-    let smc7 = document.getElementById("smc7").value;
-    let sum = Number(smc1) + Number(smc2) + Number(smc3) + Number(smc4) + Number(smc5) + Number(smc6) + Number(smc7);
-    document.getElementById("totalsmcandy").value = sum;
-    }
-function calcSummdc(){
-    let mdc1 = document.getElementById("mdc1").value;
-    let mdc2 = document.getElementById("mdc2").value;
-    let mdc3 = document.getElementById("mdc3").value;
-    let mdc4 = document.getElementById("mdc4").value;
-    let mdc5 = document.getElementById("mdc5").value;
-    let mdc6 = document.getElementById("mdc6").value;
-    let sum = Number(mdc1) + Number(mdc2) + Number(mdc3) + Number(mdc4) + Number(mdc5) + Number(mdc6);
-    document.getElementById("totalmdcandy").value = sum;
-    }
-function calcSumlgc(){
-    let lgc1 = document.getElementById("lgc1").value;
-    let lgc2 = document.getElementById("lgc2").value;
-    let lgc3 = document.getElementById("lgc3").value;
-    let lgc4 = document.getElementById("lgc4").value;
-    let lgc5 = document.getElementById("lgc5").value;
-    let lgc6 = document.getElementById("lgc6").value;
-    let sum = Number(lgc1) + Number(lgc2) + Number(lgc3) + Number(lgc4) + Number(lgc5) + Number(lgc6);
-    document.getElementById("totallgcandy").value = sum;
-    }
-function calcSumspb(){
-    let spb1 = document.getElementById("spb1").value;
-    let spb2 = document.getElementById("spb2").value;
-    let spb3 = document.getElementById("spb3").value;
-    let sum = Number(spb1) + Number(spb2) + Number(spb3);
-    document.getElementById("totalsmbag").value = sum;
-    }
-function calcSummpb(){
-    let mpb1 = document.getElementById("mpb1").value;
-    let mpb2 = document.getElementById("mpb2").value;
-    let mpb3 = document.getElementById("mpb3").value;
-    let sum = Number(mpb1) + Number(mpb2) + Number(mpb3);
-    document.getElementById("totalmdbag").value = sum;
-    }
-function calcSumlpb(){
-    let lpb1 = document.getElementById("lpb1").value;
-    let lpb2 = document.getElementById("lpb2").value;
-    let lpb3 = document.getElementById("lpb3").value;
-    let sum = Number(lpb1) + Number(lpb2) + Number(lpb3);
-    document.getElementById("totallgbag").value = sum;
-    }
-function calcSumcpb(){
-    let cpb1 = document.getElementById("cpb1").value;
-    let cpb2 = document.getElementById("cpb2").value;
-    let cpb3 = document.getElementById("cpb3").value;
-    let sum = Number(cpb1) + Number(cpb2) + Number(cpb3);
-    document.getElementById("totalcombag").value = sum;
-    }
-function calcSumkdp(){
-    let kdp1 = document.getElementById("kdp1").value;
-    let kdp2 = document.getElementById("kdp2").value;
-    let kdp3 = document.getElementById("kdp3").value;
-    let sum = Number(kdp1) + Number(kdp2) + Number(kdp3);
-    document.getElementById("totalkdp").value = sum;
-    }
-function calcSumtgp(){
-    let tgp1 = document.getElementById("tgp1").value;
-    let tgp2 = document.getElementById("tgp2").value;
-    let sum = Number(tgp1) + Number(tgp2);
-    document.getElementById("totaltgp").value = sum;
-    }
-function calcSumicecup(){
-    let icecup1 = document.getElementById("icecup1").value;
-    let icecup2 = document.getElementById("icecup2").value;
-    let sum = Number(icecup1) + Number(icecup2);
-    document.getElementById("totalicecup").value = sum;
-    }
-function calcSumkdcup(){
-    let kdcup1 = document.getElementById("kdcup1").value;
-    let kdcup2 = document.getElementById("kdcup2").value;
-    let sum = Number(kdcup1) + Number(kdcup2);
-    document.getElementById("totalkdcup").value = sum;
-    }
-function calcSumsmcup(){
-    let smcup1 = document.getElementById("smcup1").value;
-    let smcup2 = document.getElementById("smcup2").value;
-    let sum = Number(smcup1) + Number(smcup2);
-    document.getElementById("totalsmcup").value = sum;
-    }
-function calcSummdcup(){
-    let mdcup1 = document.getElementById("mdcup1").value;
-    let mdcup2 = document.getElementById("mdcup2").value;
-    let sum = Number(mdcup1) + Number(mdcup2);
-    document.getElementById("totalmdcup").value = sum;
-    }
-function calcSumlgcup(){
-    let lgcup1 = document.getElementById("lgcup1").value;
-    let lgcup2 = document.getElementById("lgcup2").value;
-    let sum = Number(lgcup1) + Number(lgcup2);
-    document.getElementById("totallgcup").value = sum;
-    }
-function calcSumiccup(){
-    let iccup1 = document.getElementById("iccup1").value;
-    let iccup2 = document.getElementById("iccup2").value;
-    let sum = Number(iccup1) + Number(iccup2);
-    document.getElementById("totaliccup").value = sum;
-    }
-function calcSumwtbl(){
-    let wtbl1 = document.getElementById("wtbl1").value;
-    let wtbl2 = document.getElementById("wtbl2").value;
-    let wtbl3 = document.getElementById("wtbl3").value;
-    let sum = Number(wtbl1) + Number(wtbl2) + Number(wtbl3);
-    document.getElementById("totalwtbl").value = sum;
-    }
-function calcSumpckl(){
-    let pckl1 = document.getElementById("pckl1").value;
-    let pckl2 = document.getElementById("pckl2").value;
-    let pckl3 = document.getElementById("pckl3").value;
-    let sum = Number(pckl1) + Number(pckl2) + Number(pckl3);
-    document.getElementById("totalpckl").value = sum;
-    }
-function calcSumhtdg(){
-    let htdg1 = document.getElementById("htdg1").value;
-    let htdg2 = document.getElementById("htdg2").value;
-    let sum = Number(htdg1) + Number(htdg2);
-    document.getElementById("totalhtdg").value = sum;
-    }
-function calcSumncho(){
-    let ncho1 = document.getElementById("ncho1").value;
-    let ncho2 = document.getElementById("ncho2").value;
-    let ncho3 = document.getElementById("ncho3").value;
-    let sum = Number(ncho1) + Number(ncho2) + Number(ncho3);
-    document.getElementById("totalncho").value = sum;
-    }
-function calcSumgbcp(){
-    let gbcp1 = document.getElementById("gbcp1").value;
-    let gbcp2 = document.getElementById("gbcp2").value;
-    let sum = Number(gbcp1) + Number(gbcp2);
-    document.getElementById("totalgbcp").value = sum;
-    }
+function calcTotal(){ // Calculation function, add all textboxes for each section together, this one is Small Candies
+//Small Candy:
+    var arr = document.getElementsByClassName('smc');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalsmcandy').value = tot;
+//Medium Candy:
+  var arr = document.getElementsByClassName('mdc');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalmdcandy').value = tot;
+//Large Candy:
+  var arr = document.getElementsByClassName('lgc');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totallgcandy').value = tot;
+//Small Popcorn:
+  var arr = document.getElementsByClassName('spb');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalsmbag').value = tot;
+//Medium Popcorn:
+  var arr = document.getElementsByClassName('mpb');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalmdbag').value = tot;
+//Large Popcorn:
+  var arr = document.getElementsByClassName('lpb');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totallgbag').value = tot;
+//Combo Popcorn:
+  var arr = document.getElementsByClassName('cpb');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalcombag').value = tot;
+//Kid Pack:
+  var arr = document.getElementsByClassName('kdp');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalkdp').value = tot;
+//To-Go Popcorn:
+  var arr = document.getElementsByClassName('tgp');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totaltgp').value = tot;
+//Ice Cup:
+  var arr = document.getElementsByClassName('icecup');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalicecup').value = tot;
+//Kid Cup:
+  var arr = document.getElementsByClassName('kdcup');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalkdcup').value = tot;
+//Small Cup:
+  var arr = document.getElementsByClassName('smcup');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalsmcup').value = tot;
+//Medium Cup:
+  var arr = document.getElementsByClassName('mdcup');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalmdcup').value = tot;
+//Large Cup:
+  var arr = document.getElementsByClassName('lgcup');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totallgcup').value = tot;
+//ICEE Cup:
+  var arr = document.getElementsByClassName('iccup');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totaliccup').value = tot;
+//Water Bottle:
+  var arr = document.getElementsByClassName('wtbl');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalwtbl').value = tot;
+//Pickle:
+  var arr = document.getElementsByClassName('pckl');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalpckl').value = tot;
+//Pickle:
+  var arr = document.getElementsByClassName('htdg');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalhtdg').value = tot;
+//Nacho:
+  var arr = document.getElementsByClassName('ncho');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalncho').value = tot;
+//Custom Item 1
+    var element =  document.getElementById('newitem1');
+  if (typeof(element) != 'undefined' && element != null)
+  {
+  var arr = document.getElementsByClassName('newitmcls1');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalnwitm1').value = tot;
+}
+//Custom Item 2
+var element =  document.getElementById('newitem2');
+  if (typeof(element) != 'undefined' && element != null)
+  {
+  var arr = document.getElementsByClassName('newitmcls2');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalnwitm2').value = tot;
+}
+//Custom Item 3
+var element =  document.getElementById('newitem3');
+  if (typeof(element) != 'undefined' && element != null)
+  {
+  var arr = document.getElementsByClassName('newitmcls3');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalnwitm3').value = tot;
+}
+//Custom Item 4
+var element =  document.getElementById('newitem4');
+  if (typeof(element) != 'undefined' && element != null)
+  {
+  var arr = document.getElementsByClassName('newitmcls4');
+  var tot = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].value))
+      tot += parseInt(arr[i].value);
+  }
+
+  document.getElementById('totalnwitm4').value = tot;
+}
+}
+    
 
 function isNumber(evt) { // Prevent non-numbers from being entered into textboxes
     evt = (evt) ? evt : window.event;
@@ -649,6 +759,11 @@ smbrk{
     background-color: rgb(22, 22, 24);
     border: 2px solid rgb(66, 66, 66);
 }
+.numberspans {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
 input{
     background-color: #292929;
     color: rgb(209, 209, 209);
@@ -657,6 +772,15 @@ input{
     transform:translateX(-50%);
     font-size: 16px;
 }
+.inpHeadr{
+        background: none;
+        border: none;
+    }
+    .inpHeadr:focus{
+        background: none;
+        border: none;
+        outline: none;
+    }
 textarea {
     font-size: 16px;
 }
