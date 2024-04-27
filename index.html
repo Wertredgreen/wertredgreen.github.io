@@ -330,7 +330,17 @@ function addNewItem(numInputs, countBoxHeader) {
 // Attach the function to your button
 document.getElementById("addItem").addEventListener("click", function() {
     var countBoxHeader = prompt("What is the Item?");
+    if (countBoxHeader === null || countBoxHeader.trim() === "") {
+    alert("Please enter a valid item name.");
+    return;
+    }
+
     var numInputs = prompt("How many inputs do you want to add?");
+    
+    if (isNaN(numInputs) || numInputs <= 0 || numInputs > 6) {
+                alert('Invalid input count. Please enter a number, max of 6.');
+                return;
+            }
     addNewItem(numInputs, countBoxHeader);
 });
 function htdgee() {
