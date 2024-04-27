@@ -325,10 +325,12 @@ function addNewItem(numInputs, countBoxHeader) {
     
     // Insert the new template at a specific location in the document
     document.getElementById("countForm").insertAdjacentHTML('beforeend', template);
+  
 }
 
 // Attach the function to your button
 document.getElementById("addItem").addEventListener("click", function() {
+  if (totalTemplates < 3) {
     var countBoxHeader = prompt("What is the Item?");
     if (countBoxHeader === null || countBoxHeader.trim() === "") {
     alert("Please enter a valid item name.");
@@ -342,7 +344,12 @@ document.getElementById("addItem").addEventListener("click", function() {
                 return;
             }
     addNewItem(numInputs, countBoxHeader);
-});
+          }
+          else {
+    alert("Maximum of 3 new items allowed.")
+  }  
+}) ;
+
 function htdgee() {
     document.body.style.backgroundImage = "url('hotdog.gif')";
     var audio = new Audio('https://ia800906.us.archive.org/35/items/tvtunes_9433/Mickey%20Mouse%20Clubhouse%20-%20Hot%20Dogs.mp3');
