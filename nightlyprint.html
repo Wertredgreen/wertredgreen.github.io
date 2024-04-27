@@ -6,7 +6,7 @@
 </head>
 <body>
     <br><br>
-    <table>
+    <table id="countSheet">
         <tr>
             <th colspan="4" style="text-align: center;">Stargazer 5 Nightly Inventory: <span id="Date"></span></th>
         </tr>
@@ -135,12 +135,6 @@
             <td>&zwj;0&zwj;</td> <!-- Amount In Stockroom-->
             <td>&zwj;<span id="tgp1-v"></span> + <span id="tgp2-v"></span>&zwj;</td> <!-- All Other Numbers To Add-->
             <td>&zwj;<span id="ttltgp-v"></span>&zwj;</td> <!-- Total -->
-          </tr>
-          <tr>
-            <th>Ghostbusters Cup</th> <!-- Name of Item-->
-            <td>&zwj;0&zwj;</td> <!-- Amount In Stockroom-->
-            <td>&zwj;<span id="gbcp1-v"></span> + <span id="gbcp2-v"></span>&zwj;</td> <!-- All Other Numbers To Add-->
-            <td>&zwj;<span id="ttlgbcp-v"></span>&zwj;</td> <!-- Total -->
           </tr>
       </table>
       <br>
@@ -316,12 +310,162 @@
         document.getElementById('ncho3-v').textContent = ncho3;
         const ttlncho = new URLSearchParams(window.location.search).get('ttlncho');
         document.getElementById('ttlncho-v').textContent = ttlncho;
-        const gbcp1 = new URLSearchParams(window.location.search).get('gbcp1');
-        document.getElementById('gbcp1-v').textContent = gbcp1;
-        const gbcp2 = new URLSearchParams(window.location.search).get('gbcp2');
-        document.getElementById('gbcp2-v').textContent = gbcp2;
-        const ttlgbcp = new URLSearchParams(window.location.search).get('ttlgbcp');
-        document.getElementById('ttlgbcp-v').textContent = ttlgbcp;
+        const nwitemhdr1 = new URLSearchParams(window.location.search).get('nwitemhdr1');
+        const nwitm1_1 = new URLSearchParams(window.location.search).get('nwitm1_1');
+        const nwitm1_2 = new URLSearchParams(window.location.search).get('nwitm1_2');
+        const nwitm1_3 = new URLSearchParams(window.location.search).get('nwitm1_3');
+        const nwitm1_4 = new URLSearchParams(window.location.search).get('nwitm1_4');
+        const nwitm1_5 = new URLSearchParams(window.location.search).get('nwitm1_5');
+        const nwitm1_6 = new URLSearchParams(window.location.search).get('nwitm1_6');
+        const ttlnwitm1 = new URLSearchParams(window.location.search).get('ttlnwitm1');
+        const nwitemhdr2 = new URLSearchParams(window.location.search).get('nwitemhdr2');
+        const nwitm2_1 = new URLSearchParams(window.location.search).get('nwitm2_1');
+        const nwitm2_2 = new URLSearchParams(window.location.search).get('nwitm2_2');
+        const nwitm2_3 = new URLSearchParams(window.location.search).get('nwitm2_3');
+        const nwitm2_4 = new URLSearchParams(window.location.search).get('nwitm2_4');
+        const nwitm2_5 = new URLSearchParams(window.location.search).get('nwitm2_5');
+        const nwitm2_6 = new URLSearchParams(window.location.search).get('nwitm2_6');
+        const ttlnwitm2 = new URLSearchParams(window.location.search).get('ttlnwitm2');
+        const nwitemhdr3 = new URLSearchParams(window.location.search).get('nwitemhdr3');
+        const nwitm3_1 = new URLSearchParams(window.location.search).get('nwitm3_1');
+        const nwitm3_2 = new URLSearchParams(window.location.search).get('nwitm3_2');
+        const nwitm3_3 = new URLSearchParams(window.location.search).get('nwitm3_3');
+        const nwitm3_4 = new URLSearchParams(window.location.search).get('nwitm3_4');
+        const nwitm3_5 = new URLSearchParams(window.location.search).get('nwitm3_5');
+        const nwitm3_6 = new URLSearchParams(window.location.search).get('nwitm3_6');
+        const ttlnwitm3 = new URLSearchParams(window.location.search).get('ttlnwitm3');
+        
+        var element =  new URLSearchParams(window.location.search).get('nwitemhdr1');
+     if (typeof(element) != 'undefined' && element != null)
+{  
+    var urlParams = new URLSearchParams(window.location.search);
+    var numSpans = urlParams.get('numSpansitm1');
+    var template = `
+    <tr>
+        <th><span id="nwitemhdr1-v"></span></th> <!-- Name of Item-->
+        <td>&zwj;0&zwj;</td> <!-- Amount In Stockroom-->
+        <td>&zwj;`;
+
+    for (var i = 1; i <= numSpans; i++) {
+        template += `<span id="nwitm1_${i}-v"></span>`;
+        if (i < numSpans) {
+            template += ' + ';
+    }
+  }
+template += `&zwj;</td> <!-- All Other Numbers To Add-->
+    <td>&zwj;<span id="ttlnwitm1-v"></span>&zwj;</td> <!-- Total -->
+    </tr>`;
+
+        // Insert the new template at a specific location in the document
+        document.getElementById("countSheet").insertAdjacentHTML('beforeend', template);
+        
+        document.getElementById('nwitemhdr1-v').textContent = nwitemhdr1;
+        document.getElementById('nwitm1_1-v').textContent = nwitm1_1;
+        if (nwitm1_2 !== null) {
+          document.getElementById('nwitm1_2-v').textContent = nwitm1_2;
+          if (nwitm1_3 !== null) {
+             document.getElementById('nwitm1_3-v').textContent = nwitm1_3;
+            if (nwitm1_4 !== null) {
+               document.getElementById('nwitm1_4-v').textContent = nwitm1_4;
+              if (nwitm1_5 !== null) {
+                  document.getElementById('nwitm1_5-v').textContent = nwitm1_5;
+                  if (nwitm1_6 !== null) {
+                     document.getElementById('nwitm1_6-v').textContent = nwitm1_6;
+}
+}
+}
+}
+}
+        document.getElementById('ttlnwitm1-v').textContent = ttlnwitm1;
+  }
+
+  var element =  new URLSearchParams(window.location.search).get('nwitemhdr2');
+if (typeof(element) != 'undefined' && element != null)
+{  
+var urlParams = new URLSearchParams(window.location.search);
+var numSpans = urlParams.get('numSpansitm2');
+var template = `
+<tr>
+   <th><span id="nwitemhdr2-v"></span></th> <!-- Name of Item-->
+   <td>&zwj;0&zwj;</td> <!-- Amount In Stockroom-->
+   <td>&zwj;`;
+
+for (var i = 1; i <= numSpans; i++) {
+   template += `<span id="nwitm2_${i}-v"></span>`;
+   if (i < numSpans) {
+       template += ' + ';
+}
+}
+template += `&zwj;</td> <!-- All Other Numbers To Add-->
+<td>&zwj;<span id="ttlnwitm2-v"></span>&zwj;</td> <!-- Total -->
+</tr>`;
+
+   // Insert the new template at a specific location in the document
+   document.getElementById("countSheet").insertAdjacentHTML('beforeend', template);
+   
+   document.getElementById('nwitemhdr2-v').textContent = nwitemhdr2;
+   document.getElementById('nwitm2_1-v').textContent = nwitm2_1;
+   if (nwitm2_2 !== null) {
+     document.getElementById('nwitm2_2-v').textContent = nwitm2_2;
+     if (nwitm2_3 !== null) {
+        document.getElementById('nwitm2_3-v').textContent = nwitm2_3;
+       if (nwitm2_4 !== null) {
+          document.getElementById('nwitm2_4-v').textContent = nwitm2_4;
+         if (nwitm2_5 !== null) {
+             document.getElementById('nwitm2_5-v').textContent = nwitm2_5;
+             if (nwitm2_6 !== null) {
+                document.getElementById('nwitm2_6-v').textContent = nwitm2_6;
+}
+}
+}
+}
+}
+   document.getElementById('ttlnwitm2-v').textContent = ttlnwitm2;
+}
+
+var element =  new URLSearchParams(window.location.search).get('nwitemhdr3');
+if (typeof(element) != 'undefined' && element != null)
+{  
+var urlParams = new URLSearchParams(window.location.search);
+var numSpans = urlParams.get('numSpansitm3');
+var template = `
+<tr>
+   <th><span id="nwitemhdr3-v"></span></th> <!-- Name of Item-->
+   <td>&zwj;0&zwj;</td> <!-- Amount In Stockroom-->
+   <td>&zwj;`;
+
+for (var i = 1; i <= numSpans; i++) {
+   template += `<span id="nwitm3_${i}-v"></span>`;
+   if (i < numSpans) {
+       template += ' + ';
+}
+}
+template += `&zwj;</td> <!-- All Other Numbers To Add-->
+<td>&zwj;<span id="ttlnwitm3-v"></span>&zwj;</td> <!-- Total -->
+</tr>`;
+
+   // Insert the new template at a specific location in the document
+   document.getElementById("countSheet").insertAdjacentHTML('beforeend', template);
+   
+   document.getElementById('nwitemhdr3-v').textContent = nwitemhdr3;
+   document.getElementById('nwitm3_1-v').textContent = nwitm3_1;
+   if (nwitm3_2 !== null) {
+     document.getElementById('nwitm3_2-v').textContent = nwitm3_2;
+     if (nwitm3_3 !== null) {
+        document.getElementById('nwitm3_3-v').textContent = nwitm3_3;
+       if (nwitm3_4 !== null) {
+          document.getElementById('nwitm3_4-v').textContent = nwitm3_4;
+         if (nwitm3_5 !== null) {
+             document.getElementById('nwitm3_5-v').textContent = nwitm3_5;
+             if (nwitm3_6 !== null) {
+                document.getElementById('nwitm3_6-v').textContent = nwitm3_6;
+}
+}
+}
+}
+}
+   document.getElementById('ttlnwitm3-v').textContent = ttlnwitm3;
+}
     </script>
 <style>
 html, body { 
