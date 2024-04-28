@@ -138,6 +138,8 @@
           </tr>
       </table>
       <br>
+      <span id="spoils-v"></span>
+      <br>
       <input type="button" id="buttonhide" style="font-size : 24px;" class="printbutton" value="Print this page" onClick="hideprint()">
 
     <script>
@@ -334,6 +336,7 @@
         const nwitm3_5 = new URLSearchParams(window.location.search).get('nwitm3_5');
         const nwitm3_6 = new URLSearchParams(window.location.search).get('nwitm3_6');
         const ttlnwitm3 = new URLSearchParams(window.location.search).get('ttlnwitm3');
+        const spoils = new URLSearchParams(window.location.search).get('spoils');
         
         var element =  new URLSearchParams(window.location.search).get('nwitemhdr1');
      if (typeof(element) != 'undefined' && element != null)
@@ -466,6 +469,10 @@ template += `&zwj;</td> <!-- All Other Numbers To Add-->
 }
    document.getElementById('ttlnwitm3-v').textContent = ttlnwitm3;
 }
+
+var element =  new URLSearchParams(window.location.search).get('spoils');
+if (typeof(element) != 'undefined' && element != null)
+{  document.getElementById('spoils-v').textContent = spoils; }
     </script>
 <style>
 html, body { 

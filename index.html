@@ -8,7 +8,6 @@
     <h2 id="nightlyinvhead" style="text-align: center;">Stargazer 5 Nightly Inventory</h2>
     <br><br><br>
     <input type="button" value="Add Item" id="addItem" class="addItem">
-    <!--<input type="button" class="spoils" value="Spoils" id="spoils" onclick="spoilsmenu()">-->
 <smbrk>
     <input type="button" value="Clear" id="Calculate" onclick="clearreload()">
 <br><br><br><br>
@@ -264,8 +263,15 @@
 <input type="number" id="totalncho" class="totals" name="ttlncho" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-</form>
+<div class="CountBox">
+    <br><br><br>
+    <header class="CountHead">SPOILS</header>
+    <br><br><br>
+<input type="text" class="spoils" value="" id="spoils" name="spoils" placeholder="(-1 Hotdog, -2 LG Cups, etc.)" onchange='saveValue(this);'>
 <br><br><br><br>
+</div>
+</form>
+<br><br>
 <input type="button" value="Calculate" id="Calculate" onclick="calcSum()">
 <br><br><br><br>
 <span id="buttonAppear"></span>
@@ -549,7 +555,7 @@ function calcTotal(){ // Calculation function, add all textboxes for each sectio
   }
 
   document.getElementById('totalpckl').value = tot;
-//Pickle:
+//Hotdog:
   var arr = document.getElementsByClassName('htdg');
   var tot = 0;
 
@@ -807,7 +813,7 @@ textarea {
     background-color: #4d4d4d;
 }
 #Calculate, #Print{
-    width: 75%;
+    width: 320px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -902,7 +908,7 @@ textarea {
 .red-border {
   border: 1px solid red;
 }
-.spoils, .addItem{
+.addItem{
     width: 320px;
     height: 60px;
     position: fixed;
@@ -913,9 +919,8 @@ textarea {
     transform:translateX(-50%);
     margin-left: 2px;
 }
-.spoils {
-    margin-left: 2px;
-}
+
+
 </style>
 </div>
 </body>
