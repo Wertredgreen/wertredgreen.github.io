@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1", maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1", maximum-scale=1.0, minimum-scale=1.0, user-scalable=0>
 <title>Nightly Inventory</title>
 </head>
 <body>
@@ -8,6 +8,7 @@
     <h2 id="nightlyinvhead" style="text-align: center;">Stargazer 5 Nightly Inventory</h2>
     <br><br><br>
     <input type="button" value="Add Item" id="addItem" class="addItem">
+    <input type="button" value="Spoils" id="spoilsmenu" class="spoilsmenu" onclick="javascript: spoilsmenushow();">
 <smbrk>
     <input type="button" value="Clear" id="Calculate" onclick="clearreload()">
 <br><br><br><br>
@@ -263,7 +264,7 @@
 <input type="number" id="totalncho" class="totals" name="ttlncho" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<div class="CountBox">
+<div class="CountBox Spoilsbox">
     <br><br><br>
     <header class="CountHead">SPOILS</header>
     <br><br><br>
@@ -281,6 +282,8 @@
 
 <script>
 var totalTemplates = 0;
+
+document.getElementById( "spoilsmenu" ).setAttribute( "onClick", "javascript: spoilsmenushow();" );
 
        document.getElementById('countForm').addEventListener('submit', function (event) {
             // Prevent the form from submitting immediately
@@ -307,9 +310,23 @@ var totalTemplates = 0;
                 event.target.submit();
             }
         });
-function spoilsmenu() {
-    alert("Spoils");
+
+function spoilsmenushow() {
+    const spoilsbox = document.querySelectorAll('.Spoilsbox');
+    spoilsbox.forEach((element) => {
+        element.style.animation = 'spoilsreveal 0.4s forwards';
+    });
+    document.getElementById( "spoilsmenu" ).setAttribute( "onClick", "javascript: spoilsmenuhide();" );
 }
+
+function spoilsmenuhide() {
+    const spoilsbox = document.querySelectorAll('.Spoilsbox');
+    spoilsbox.forEach((element) => {
+        element.style.animation = 'spoilshide 0.4s forwards';
+    });
+    document.getElementById( "spoilsmenu" ).setAttribute( "onClick", "javascript: spoilsmenushow();" );
+}
+
 function addNewItem(numInputs, countBoxHeader) {
     totalTemplates++;
     var template = ` <input type="text" class="CountHead numberspans" value="${numInputs}" name="numSpansitm${totalTemplates}" readonly>
@@ -721,9 +738,6 @@ document.getElementById("iccup2").value = getSavedValue("iccup2");
 document.getElementById("htdg1").value = getSavedValue("htdg1");
 document.getElementById("htdg2").value = getSavedValue("htdg2");
 
-document.getElementById("gbcp1").value = getSavedValue("gbcp1");
-document.getElementById("gbcp2").value = getSavedValue("gbcp2");
-
 
         //Save the value function - save it to localStorage as (ID, VALUE)
         function saveValue(e){
@@ -762,7 +776,7 @@ smbrk{
     left: 50%;
     padding-top: 8px;
     margin-top: -8px;
-    margin-left: -158px;
+    margin-left: -160px;
     margin-bottom:2px;
     border-bottom: 2px solid rgb(66, 66, 66);
     color:#c2c2c2;
@@ -890,12 +904,22 @@ textarea {
  100% { transform: translateX(-50%) }
 }
 
+@keyframes spoilsreveal {
+ 0% { bottom: -20%; }
+ 100% { bottom: 85px; }
+}
+
+@keyframes spoilshide {
+ 0% { bottom: 85px; }
+ 100% { bottom: -20%; }
+}
+
 ::placeholder {
   color: rgb(129, 129, 129);
   opacity: 1;
 }
 .content {
-  max-width: 320px;
+  max-width: 324px;
   margin: auto;
 }
 .hotdoggif {
@@ -908,8 +932,8 @@ textarea {
 .red-border {
   border: 1px solid red;
 }
-.addItem{
-    width: 320px;
+.addItem, .spoilsmenu{
+    width: 160px;
     height: 60px;
     position: fixed;
     margin: auto;
@@ -917,9 +941,18 @@ textarea {
     z-index: 9;
     left: 50%;
     transform:translateX(-50%);
-    margin-left: 2px;
 }
-
+.additem {
+  margin-left: 80px;
+}
+.spoilsmenu {
+  margin-left: -80px;
+}
+.Spoilsbox {
+  position: fixed;
+  bottom: -20%;
+  z-index:100;
+}
 
 </style>
 </div>
