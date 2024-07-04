@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-<meta name="viewport" content="width=644px, initial-scale=1", maximum-scale=1.0, minimum-scale=1.0, user-scalable=0>
+<meta name="viewport" content="width=device-width, initial-scale=1", maximum-scale=1.0, minimum-scale=1.0, user-scalable=0>
 <title>Nightly Inventory</title>
 </head>
 <body>
@@ -13,7 +13,6 @@
     <input type="button" value="Clear" id="Calculate" onclick="clearreload()">
 <br><br><br><br>
 <form id="countForm" action="nightlyprint.html" method="GET"> <!-- For Printing At End -->
-  <button type="button" class="collapsible">Small Candies</button>
     <div class="CountBox"> <!-- Start of Counting Textboxes -->
     <br><br><br>
     <header class="CountHead">Small Candies</header>
@@ -35,7 +34,6 @@
 <input type="number" id="totalsmcandy" class="totals" name="ttlsmc" placeholder="Total" readonly> <!-- Set to ReadOnly so Total can't be modified by mistake -->
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Medium Candies</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Medium Candies</header>
@@ -55,7 +53,6 @@
 <input type="number" id="totalmdcandy" class="totals" name="ttlmdc" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Large Candies</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Large Candies</header>
@@ -75,7 +72,6 @@
 <input type="number" id="totallgcandy" class="totals" name="ttllgc" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Small Bags</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Small Bags</header>
@@ -89,7 +85,6 @@
 <input type="number" id="totalsmbag" class="totals" name="ttlspb" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Medium Bags</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Medium Bags</header>
@@ -103,7 +98,6 @@
 <input type="number" id="totalmdbag" class="totals" name="ttlmpb" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Large Bags</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Large Bags</header>
@@ -117,7 +111,6 @@
 <input type="number" id="totallgbag" class="totals" name="ttllpb" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Combo Bags</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Combo Bags</header>
@@ -131,7 +124,6 @@
 <input type="number" id="totalcombag" class="totals" name="ttlcpb" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Kid Packs</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Kid Packs</header>
@@ -145,7 +137,6 @@
 <input type="number" id="totalkdp" class="totals" name="ttlkdp" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">To-Go Bags</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">To-Go Bags</header>
@@ -157,7 +148,6 @@
 <input type="number" id="totaltgp" class="totals" name="ttltgp" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Ice Cups</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Ice Cups</header>
@@ -169,7 +159,6 @@
 <input type="number" id="totalicecup" class="totals" name="ttlicecup" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Kid Cups</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Kid Cups</header>
@@ -181,7 +170,6 @@
 <input type="number" id="totalkdcup" class="totals" name="ttlkdcup" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Small Cups</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Small Cups</header>
@@ -193,7 +181,6 @@
 <input type="number" id="totalsmcup" class="totals" name="ttlsmcup" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Medium Cups</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Medium Cups</header>
@@ -205,7 +192,6 @@
 <input type="number" id="totalmdcup" class="totals" name="ttlmdcup" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Large Cups</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Large Cups</header>
@@ -217,7 +203,6 @@
 <input type="number" id="totallgcup" class="totals" name="ttllgcup" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Icee Cups</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Icee Cups</header>
@@ -229,7 +214,6 @@
 <input type="number" id="totaliccup" class="totals" name="ttliccup" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Water Bottles</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Water Bottles</header>
@@ -243,7 +227,6 @@
 <input type="number" id="totalwtbl" class="totals" name="ttlwtbl" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Pickles</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Pickles</header>
@@ -257,7 +240,6 @@
 <input type="number" id="totalpckl" class="totals" name="ttlpckl" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Hotdogs</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Hotdogs</header>
@@ -269,7 +251,6 @@
 <input type="number" id="totalhtdg" class="totals" name="ttlhtdg" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<button type="button" class="collapsible">Nachos</button>
 <div class="CountBox">
     <br><br><br>
     <header class="CountHead">Nachos</header>
@@ -283,7 +264,7 @@
 <input type="number" id="totalncho" class="totals" name="ttlncho" placeholder="Total" readonly>
 <br><br><br><br>
 </div>
-<div class="CountBox2 Spoilsbox">
+<div class="CountBox Spoilsbox">
     <br><br><br>
     <header class="CountHead">SPOILS</header>
     <br><br><br>
@@ -347,7 +328,7 @@ function spoilsmenuhide() {
 function addNewItem(numInputs, countBoxHeader) {
     totalTemplates++;
     var template = ` <input type="text" class="CountHead numberspans" value="${numInputs}" name="numSpansitm${totalTemplates}" readonly>
-    <div class="CountBox2" id="newitem${totalTemplates}"">
+    <div class="CountBox" id="newitem${totalTemplates}"">
         <br><br><br>
         <input type="text" class="CountHead inpHeadr" value="${countBoxHeader}" name="nwitemhdr${totalTemplates}" readonly>
         <br><br><br>`;
@@ -774,21 +755,6 @@ document.getElementById("htdg2").value = getSavedValue("htdg2");
             }
             return localStorage.getItem(v);
         }
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
 </script>
 
 <style>
@@ -802,46 +768,25 @@ smbrk{
     left: 50%;
     padding-top: 8px;
     margin-top: -8px;
-    margin-left: -320px;
+    margin-left: -160px;
     margin-bottom:2px;
     border-bottom: 2px solid rgb(66, 66, 66);
     color:#c2c2c2;
     position: fixed;
-    width:640px;
+    width:320px;
     background-color:  rgb(22, 22, 24);
     z-index: 9;
 }
 .CountHead{
-    min-width: 640px;
+    min-width: 320px;
     text-align: center;
     color:#c2c2c2;
 }
 .CountBox{
-    width: 640px;
+    width: 320px;
     margin: auto;
     background-color: rgb(22, 22, 24);
     border: 2px solid rgb(66, 66, 66);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-.CountBox2{
-    width: 640px;
-    margin: auto;
-    background-color: rgb(22, 22, 24);
-    border: 2px solid rgb(66, 66, 66);
-}
-.collapsible{
-  background-color: 292929;
-  color: #c2c2c2;
-  cursor: pointer;
-  padding: 18px;
-  margin: auto;
-  width: 100%;
-  border: 2px solid rgb(66, 66, 66);
-  text-align: left;
-  outline: none;
-  font-size: 15px;
 }
 .numberspans {
         visibility: hidden;
@@ -857,9 +802,6 @@ input{
     left: 50%;
     transform:translateX(-50%);
     font-size: 16px;
-}
-.textfield, .totals{
-  font-size: 32px;
 }
 .inpHeadr{
         background: none;
@@ -877,7 +819,7 @@ textarea {
     background-color: #4d4d4d;
 }
 #Calculate, #Print{
-    width: 640px;
+    width: 320px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -969,7 +911,7 @@ textarea {
   opacity: 1;
 }
 .content {
-  max-width: 644px;
+  max-width: 324px;
   margin: auto;
 }
 .hotdoggif {
