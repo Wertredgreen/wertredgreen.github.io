@@ -784,8 +784,14 @@ for (i = 0; i < coll.length; i++) {
     var content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
+      content.style.borderBottom = "0px solid rgb(66, 66, 66)";
+      content.style.borderLeft = "0px solid rgb(66, 66, 66)";
+      content.style.borderRight = "0px solid rgb(66, 66, 66)";
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
+      content.style.borderBottom = "2px solid rgb(66, 66, 66)";
+      content.style.borderLeft = "2px solid rgb(66, 66, 66)";
+      content.style.borderRight = "2px solid rgb(66, 66, 66)";
     }
   });
 }
@@ -820,8 +826,9 @@ smbrk{
     width: 640px;
     margin: auto;
     background-color: rgb(22, 22, 24);
-    border: 2px solid rgb(66, 66, 66);
+    border: 0px solid rgb(66, 66, 66);
     max-height: 0;
+    border-radius: 20px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
@@ -830,6 +837,7 @@ smbrk{
     margin: auto;
     background-color: rgb(22, 22, 24);
     border: 2px solid rgb(66, 66, 66);
+    border-radius: 20px;
 }
 .collapsible{
   background-color: 292929;
@@ -841,6 +849,9 @@ smbrk{
   border: 2px solid rgb(66, 66, 66);
   text-align: left;
   outline: none;
+  text-align: center;
+  margin-top: 2px;
+  border-radius: 20px;
   font-size: 15px;
 }
 .numberspans {
@@ -857,9 +868,11 @@ input{
     left: 50%;
     transform:translateX(-50%);
     font-size: 16px;
+    border-radius: 20px;
 }
 .textfield, .totals{
   font-size: 32px;
+  border-radius: 5px;
 }
 .inpHeadr{
         background: none;
@@ -983,7 +996,7 @@ textarea {
   border: 1px solid red;
 }
 .addItem, .spoilsmenu{
-    width: 160px;
+    width: 320px;
     height: 60px;
     position: fixed;
     margin: auto;
@@ -993,10 +1006,10 @@ textarea {
     transform:translateX(-50%);
 }
 .additem {
-  margin-left: 80px;
+  margin-left: 160px;
 }
 .spoilsmenu {
-  margin-left: -80px;
+  margin-left: -160px;
 }
 .Spoilsbox {
   position: fixed;
