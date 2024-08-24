@@ -1,0 +1,55 @@
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=644px, initial-scale=1", maximum-scale=1.0, minimum-scale=1.0, user-scalable=0>
+        <title>MenuTest</title>
+        </head>
+        <body>
+    <div class="container">
+        <div class="sliding-background"></div>
+        <div class="menu-overlay"></div>
+    </div>
+</body>
+</html>
+
+<style>
+body {
+  margin: 0;
+  width: 1280px;
+  height: 720px;
+}
+
+.container {
+    position: relative;
+  overflow: hidden;
+  height: 720px;
+}
+
+.sliding-background {
+    position:relative;
+  --imageHeight: 720px;
+  --imageWidth: 1280px;
+    background: url("https://raw.githubusercontent.com/Wertredgreen/wertredgreen.github.io/main/ImagesForThing/AllenTheatresThing.png") repeat;
+  height: calc(var(--imageHeight) * 2);
+  width:  calc(var(--imageWidth) * 2);
+  animation: slide 120s linear infinite;
+  z-index:1;
+}
+.menu-overlay {
+    position: absolute;
+    background: url("https://raw.githubusercontent.com/Wertredgreen/wertredgreen.github.io/main/ImagesForThing/CombosMenuThing.png");
+    width: 1280px;
+    height:720px;
+    top: 0;
+    left: 0;
+    z-index:3;
+}
+
+@keyframes slide { 
+  from {
+    transform: translateY(0px) translateX(0px);
+  }
+  to {
+    transform: translateY(calc(var(--imageHeight) * -1)) translateX(calc(var(--imageWidth) * -1));
+  }
+}
+</style>
